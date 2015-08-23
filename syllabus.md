@@ -321,8 +321,8 @@ feel you need it!).  If you are interested, more information will be provided.
 
 
 [GitHub page]: https://github.com/2015-fall-csuf-benblazak-cpsc-121
-[extra credit]: ./extra-credit
-[standards]: ./standards
+[extra credit]: ./extra-credit.md
+[standards]: ./standards.md
 [tentative schedule]: #tentative-schedule
 [ECS Wiki]: https://wiki.ecs.fullerton.edu
 

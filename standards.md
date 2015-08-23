@@ -45,7 +45,7 @@
     - exceptions
 
 
-[general knowledge]: ./standards-general-knowledge
+[general knowledge]: ./standards-general-knowledge.md
 
 -------------------------------------------------------------------------------
 Copyright &copy; 2015 Ben Blazak <ic07@csu.fullerton.edu>  
