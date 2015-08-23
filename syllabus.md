@@ -1,7 +1,7 @@
 # Syllabus
 
 CPSC 121 (Programming Language Concepts)  
-Ben Blazak <ic07@csu.fullerton.edu>
+Ben Blazak <ic07@csu.fullerton.edu>  
 <https://github.com/2015-fall-csuf-benblazak-cpsc-121>
 
 **Note: These course documents are not yet final.  No extra credit will be
