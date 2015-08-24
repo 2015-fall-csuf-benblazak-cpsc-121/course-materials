@@ -1,7 +1,7 @@
 # Syllabus
 
 CPSC 121 (Programming Language Concepts)  
-Ben Blazak <ic07@csu.fullerton.edu>  
+Ben Blazak <bblazak@fullerton.edu>  
 <https://github.com/2015-fall-csuf-benblazak-cpsc-121>
 
 **Note: These course documents are not yet final.  No extra credit will be
@@ -22,7 +22,7 @@ Lecture | Tu Th | 08:30--09:20 | CS 110B
 Lab     |    Th | 09:30--11:20 | CS 204
 
 <!-- TODO -->
-Midterm: Thursday, October 15, during normally scheduled lecture and lab
+Midterm: Thursday, October 15, during normally scheduled lecture and lab  
 Final Exam: Thursday, December 17, from 09:30--11:20, location TBA
 
 ### Office hours
@@ -311,6 +311,20 @@ leader as an undergrad, and I strongly recommend the program (even if you don't
 feel you need it!).  If you are interested, more information will be provided.
 
 
+## Disclaimer
+
+Per [UPS 300.004]
+(http://www.fullerton.edu/senate/documents/PDF/300/UPS300.004_12-3-13.pdf)
+
+> Faculty shall not be bound to adhere to their course outlines on a strict
+> day-to-day basis, but should follow their outlines as much as is reasonably
+> possible.
+>
+> After distribution of course outlines to students, major assignment or course
+> requirement changes (e.g., additional term papers or examinations) must be
+> announced to students with a reasonable timetable for completion.
+
+
 ## Footnotes
 
 1: Adapted from the model schedule on the [ECS Wiki][]'s [CPSC 121 page]
@@ -327,7 +341,7 @@ feel you need it!).  If you are interested, more information will be provided.
 [ECS Wiki]: https://wiki.ecs.fullerton.edu
 
 -------------------------------------------------------------------------------
-Copyright &copy; 2015 Ben Blazak <ic07@csu.fullerton.edu>  
+Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>  
 Project located at <https://github.com/2015-fall-csuf-benblazak-cpsc-121>
 
