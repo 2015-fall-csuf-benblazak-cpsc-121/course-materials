@@ -15,7 +15,7 @@
 
 - [The C++ Programming Language]
   (https://isocpp.org)  
-  Links to the C++ standard, and the C++ Super-FAQ
+  Links to the C++ standard and the C++ Super-FAQ
 
 - [cplusplus.com]
   (http://www.cplusplus.com)  
@@ -23,8 +23,9 @@
 
 - [C++ Reference]
   (http://en.cppreference.com/w/)  
-  Probably slightly better than <cplusplus.com> as a technical reference,
-  though <cplusplus.com> does tend to have better examples
+  Probably slightly better than [cplusplus.com] (http://www.cplusplus.com) as a
+  technical reference, though [cplusplus.com] (http://www.cplusplus.com) does
+  tend to have better examples
 
 - [cdecl]
   (http://cdecl.org)  
@@ -38,9 +39,8 @@
   About the `inline` keyword, and the ODR (One Definition Rule)
 
 - [Are pointers and arrays equivalent in C?]
-  (http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c)
-
--------------------------------------------------------------------------------
+  (http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c)  
+  Short answer: no; but you should (*always*) try to understand why
 
 ## Administrative
 
@@ -66,7 +66,7 @@
 
 - [Visual Studio Community]
   (https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)  
-  A free (and I think fully feaatured?) version of Visual Studio
+  A free (and I think fully featured) version of Visual Studio
 
 - [Microsoft DreamSpark]
   (https://www.dreamspark.com/Student/)  

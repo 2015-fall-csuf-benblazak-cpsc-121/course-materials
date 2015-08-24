@@ -26,7 +26,7 @@ or expanded during the course of the semester.
 - safety
     - RSI
     - ergonomics
-- general
+- general c++
     - why are there both pointers and references?
     - why is `this` a pointer instead of a reference?
 
@@ -47,11 +47,11 @@ or expanded during the course of the semester.
 - big-O
 - best, worst, and amortized cases for algorithmic analysis
 - translation unit
-- const correctness
+- `const` correctness
 
 ## Object-Oriented Programming
-- RAII
 - ADT
+- RAII
 - design patterns
 
 
