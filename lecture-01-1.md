@@ -12,6 +12,7 @@
     - Suggestions, comments, concerns?
 - Demo
     - GitHub
+        - fix error in [assignment-01-1](../assignment-01-1) readme.md
     - Write short program
         - Emphasize coding standards
             - Documentation
