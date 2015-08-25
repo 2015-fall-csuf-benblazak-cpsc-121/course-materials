@@ -1,12 +1,15 @@
 ## Administrative
 - Take roll
-    - Highlighted students need to go to the department office (cs 522) after
+    - Highlighted students need to go to the department office (CS 522) after
       class, within the next 12 hours, or they will be dropped from the course
 - Start waiting list form
 - Go over syllabus
 - Quiz next lecture (probably): talk about format
 
 ## Lecture
+- Questions
+    - Would after Tuesday lecture be a good time for office hours?
+    - Suggestions, comments, concerns?
 - Demo
     - GitHub
     - Write short program
@@ -14,8 +17,6 @@
             - Documentation
             - Formatting
             - Copyright and license
-    - Questions
-        - Would after Tuesday lecture be a good time for office hours?
 
 
 ## Activity
