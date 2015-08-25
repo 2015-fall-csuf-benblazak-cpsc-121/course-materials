@@ -1,17 +1,40 @@
-**TODO: still working on this**
-
+## Administrative
 - Take roll
+    - Highlighted students need to go to the department office (cs 522) after
+      class, within the next 12 hours, or they will be dropped from the course
 - Start waiting list form
 - Go over syllabus
+- Quiz next lecture (probably): talk about format
 
-- Questions
-    - Good times for office hours (my schedule allowing)?
-    - How many tests besides the final?
-    - When should the test(s) be?
+## Lecture
+- Demo
+    - GitHub
+    - Write short program
+        - Emphasize coding standards
+            - Documentation
+            - Formatting
+            - Copyright and license
+    - Questions
+        - Would after Tuesday lecture be a good time for office hours?
+
+
+## Activity
+
+### [Fizz Buzz](http://c2.com/cgi/wiki?FizzBuzzTest)
+
+> Write a program that prints the numbers from 1 to 100. But for multiples of
+> three print "Fizz" instead of the number and for the multiples of five print
+> "Buzz". For numbers which are multiples of both three and five print
+> "FizzBuzz".
+
+### [assignment-01-1](../assignment-01-1)
 
 
 -------------------------------------------------------------------------------
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)]
+(http://creativecommons.org/licenses/by/4.0/)  
 Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>  
+This work is licensed under a [Creative Commons Attribution 4.0 International
+License] (http://creativecommons.org/licenses/by/4.0/)  
 Project located at <https://github.com/2015-fall-csuf-benblazak-cpsc-121>
 
