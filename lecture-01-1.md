@@ -1,5 +1,5 @@
 ## Administrative
-- Take roll
+- Take roll / introductions
     - Highlighted students need to go to the department office (CS 522) after
       class, within the next 12 hours, or they will be dropped from the course
 - Start waiting list form
