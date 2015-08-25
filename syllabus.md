@@ -4,10 +4,6 @@ CPSC 121 (Programming Language Concepts)
 Ben Blazak <bblazak@fullerton.edu>  
 <https://github.com/2015-fall-csuf-benblazak-cpsc-121>
 
-**Note: These course documents are not yet final.  No extra credit will be
-given for errors found in any of these documents until this notice is removed
-(though, pull requests are still welcome before then).**
-
 
 ## Calendar
 
