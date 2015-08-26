@@ -18,7 +18,7 @@
         - terminal I/O
         - file I/O
         - project with multiple .h and .c files
-    - datatypes and data representation
+    - data types and representation
     - operators
     - control flow
     - arrays
