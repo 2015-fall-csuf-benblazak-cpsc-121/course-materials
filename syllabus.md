@@ -44,7 +44,7 @@ course [standards][], whether we covered it in class or not.
 ### Tentative Schedule
 
 | Topic [\[1\]](#footnotes) | Chapter(s) (from the Gaddis textbook) | Number of Weeks |
-|-------|---------------------------------------|-----------------|
+|---|---|---|
                         Review of CPSC 120 | 1--6, 8 | 3
                           OOP Introduction | 7       | 2
                                   Pointers | 10      | 1
