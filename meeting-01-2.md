@@ -11,7 +11,7 @@
 - My teaching/learning philosophy for CS
 - Questions
     - Would after Tuesday lecture be a good time for my office hour?
-    - Suggestions, comments, concerns?
+    - Comments, suggestions, concerns?
 
 ## Activity
 

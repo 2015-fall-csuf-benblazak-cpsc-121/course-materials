@@ -28,11 +28,11 @@ _standards = {
     ),
 
     'history and culture': (
-        'general knowledge',
+        'history and culture :: general knowledge',
     ),
 
     'design': (
-        'general knowledge',
+        'design :: general knowledge',
         'debugging and testing correctness',
         'pseudocode',
         'documentation',
@@ -40,7 +40,7 @@ _standards = {
     ),
 
     'review': (
-        'general knowledge',
+        'review :: general knowledge',
         'visual studio',
         'data types and representation',
         'operators',
@@ -51,7 +51,7 @@ _standards = {
     ),
 
     'general programming': (
-        'general knowledge',
+        'general programming :: general knowledge',
         'recursion',
         'searching, sorting, and algorithm analysis',
         'type declarations',
@@ -63,7 +63,7 @@ _standards = {
     ),
 
     'object-oriented programming': (
-        'general knowledge',
+        'object-oriented programming :: general knowledge',
         'member functions',
         'interfaces',
         'inheritance',
