@@ -1,13 +1,14 @@
+- Math salute!
+
 ## Administrative
 - Is anyone still trying to add?
     - If yes, take roll
 - Is anyone interested in challenging?
 - Syllabus (continued)
     - Mention calendar
-    - Talk about book
     - Talk about etiquette (classroom expectations)
     - Clarify about copying: must be done according to license
-- My CS teaching/learning philosophy
+- My teaching/learning philosophy for CS
 - Questions
     - Would after Tuesday lecture be a good time for my office hour?
     - Suggestions, comments, concerns?

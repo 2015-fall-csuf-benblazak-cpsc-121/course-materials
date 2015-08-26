@@ -1,6 +1,7 @@
 ## Administrative
 - Linux!
 - Deep Freeze
+- Talk about book
 
 ## Demo
 - GitHub
