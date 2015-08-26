@@ -1,6 +1,5 @@
-- Math salute!
-
 ## Administrative
+- Math salute!
 - Is anyone still trying to add?
     - If yes, take roll
 - Is anyone interested in challenging?
