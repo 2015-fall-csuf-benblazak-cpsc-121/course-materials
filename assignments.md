@@ -1,3 +1,5 @@
 # Assignments
-- [assignment-01 (roman numerals)](../assignment-01): due TBA
 
+| Assignment | Due Date |
+|---|---|
+[assignment-01](../../../assignment-01) (roman numerals) | TBA
