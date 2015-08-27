@@ -12,6 +12,8 @@
         - Formatting
         - Copyright and license
 
+## Quiz?
+
 ## Activity
 - Git and GitHub familiarization
 - [assignment-01](../../../assignment-01)
