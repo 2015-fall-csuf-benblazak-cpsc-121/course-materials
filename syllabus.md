@@ -17,13 +17,15 @@ Ben Blazak <bblazak@fullerton.edu>
 Lecture | Tu Th | 08:30--09:20 | CS 110B
 Lab     |    Th | 09:30--11:20 | CS 204
 
-<!-- TODO -->
 Midterm: Thursday, October 15, during normally scheduled lecture and lab  
-Final Exam: Thursday, December 17, from 09:30--11:20, location TBA
+Final Exam: Thursday, December 17, from 09:30--11:20, in CS 110B
 
 ### Office hours
-<!-- TODO -->
-Location and time TBA
+|   |   |
+|---|---|
+Tu | 09:30--10:30 | CS 303
+
+And by appointment.
 
 ### Homework and Lab Assignments
 
