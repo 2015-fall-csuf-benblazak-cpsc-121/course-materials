@@ -31,10 +31,17 @@ or expanded during the course of the semester.
     - why is `this` a pointer instead of a reference?
 
 ## Review
-- compile, link, load, execute
+- c++ compilation process
+    - preprocess
+    - compile
+    - assemble
+    - link
+- program execution process
+    - load
+    - run
+- named constant vs object-like macro
+  (e.g. `const int ten = 10;` vs `#define TEN 10`)
 - bit, byte, word
-- macro
-- `const`
 
 ## Design
 - unit testing
