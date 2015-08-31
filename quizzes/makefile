@@ -47,6 +47,6 @@ view-standards:
 
 # -----------------------------------------------------------------------------
 
-%.pdf: %.tex
+%.pdf: %.tex document-setup.part.tex scripts/functions.lua
 	latexmk --shell-escape -lualatex -pdf '$<'
 
