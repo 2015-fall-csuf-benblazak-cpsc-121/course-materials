@@ -1,0 +1,343 @@
+% vim: foldmethod=marker foldmarker={{{{{,}}}}} foldlevel=0
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\def \docTitle  {Quiz 01}
+
+% -----------------------------------------------------------------------------
+% document setup
+% -----------------------------------------------------------------------------
+% {{{{{
+
+\def \docAuthor {\question{Name:\hfill{}CWID:\hfill{}}\answer{Answer Key}}
+\def \docClass  {CPSC 121-11}
+\def \docSchool {~}
+\def \docTerm   {CSUF Fall 2015}
+
+\def \docCopyright {{
+  \tiny
+%   \vfill
+%   \vspace{\parskip}
+%   {\answer{\color{red}}\question{\color{.}}\hrule}
+%   \vspace{0\parskip}
+  \begin{minipage}[c]{0.10\textwidth} \vspace{0ex}
+    \includegraphics[height=5ex]{images/ccby}
+  \end{minipage}
+  \begin{minipage}[c]{0.90\textwidth} \vspace{0ex}
+    Copyright \copyright{} Ben Blazak \url{bblazak@fullerton.edu}\\
+    This work is licensed under a Creative Commons Attribution 4.0
+    International License \url{http://creativecommons.org/licenses/by/4.0/}
+  \end{minipage}
+%   \vspace{-2.5\parskip}
+}}
+\def \docCopyrightTest {{
+  \tiny
+  \vfill
+  \vspace{\parskip}
+  {\answer{\color{red}}\question{\color{.}}\hrule}
+  \vspace{0\parskip}
+  \begin{minipage}[c]{0.10\textwidth} \vspace{0ex}
+    \includegraphics[height=5ex]{images/ccby}
+  \end{minipage}
+  \begin{minipage}[c]{0.90\textwidth} \vspace{0ex}
+    Copyright \copyright{} Ben Blazak \url{bblazak@fullerton.edu}\\
+    This work is licensed under a Creative Commons Attribution 4.0
+    International License \url{http://creativecommons.org/licenses/by/4.0/}
+  \end{minipage}
+  \vspace{-2.5\parskip}
+}}
+
+% -----------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[includehead,
+            includefoot,
+            margin=1in,
+            top=.25in,
+            headheight=.75in,
+            headsep=.25in,
+            footskip=.25in,
+           ]{geometry}
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage{url}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+
+% text ------------------------------------------------------------------------
+
+\binoppenalty = 10000  % never break next to a binary operator
+\relpenalty   = 10000  % never break next to a relation operator
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1ex}
+
+\setlist[itemize]{nosep,itemsep=.5ex,parsep=.5ex}
+
+% math ------------------------------------------------------------------------
+
+\setlength{\mathindent}{1cm}
+
+% - "\begin{document}" resets these values, so they have to be treated
+%   specially
+\AtBeginDocument{
+  \setlength{\abovedisplayskip}{1.5ex plus .5ex minus .5ex}
+  \setlength{\belowdisplayskip}{1.5ex plus .5ex minus .5ex}
+}
+
+% source code -----------------------------------------------------------------
+
+\usemintedstyle{solarizedlight}
+
+\fvset{samepage=true}
+
+% header and footer -----------------------------------------------------------
+
+\pagestyle{fancy}
+
+\renewcommand{\headrule}{{\answer{\color{red}}\question{\color{.}}
+                          \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}}
+\renewcommand{\footrule}{{\answer{\color{red}}\question{\color{.}}
+                          \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}}
+
+\fancyhead[L]{{\answer{\color{red}}\question{\color{.}}\docAuthor}
+              {\color{.}\\\docClass}}
+\fancyhead[C]{{\color{.}\docSchool\\}}
+\fancyhead[R]{{\color{.}\docTerm\\\docTitle}}
+
+\fancyfoot[C]{\thepage{} of \pageref{LastPage}}
+
+\fancypagestyle{firstpage}{
+%   \vskip -4ex \vskip -.8pt  % height of the copyright block
+  \renewcommand{\footrule}{{
+    \vskip 1ex
+    {\answer{\color{red}}\question{\color{.}}
+     \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}
+    \vskip .5ex
+    \docCopyright{}
+    \vskip .5ex
+    \vskip -.125in
+    {\answer{\color{red}}\question{\color{.}}
+     \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}
+  }}
+}
+
+% -----------------------------------------------------------------------------
+% macros
+% -----------------------------------------------------------------------------
+
+% abbreviations ---------------------------------------------------------------
+
+\def \<{\langle}
+\def \>{\rangle}
+
+\def \ε{\varepisilon}
+\def \θ{\vartheta}
+\def \κ{\varkappa}
+\def \π{\varpi}
+\def \ρ{\varrho}
+\def \σ{\varsigma}
+\def \φ{\varphi}
+
+\def \Γ{\varGamma}
+\def \Δ{\varDelta}
+\def \Θ{\varTheta}
+\def \Λ{\varLambda}
+\def \Ξ{\varXi}
+\def \Π{\varPi}
+\def \Σ{\varSigma}
+\def \Υ{\varUpsilon}
+\def \Φ{\varPhi}
+\def \Ψ{\varPsi}
+\def \Ω{\varOmega}
+
+% special characters ----------------------------------------------------------
+
+\catcode `α = \active \let α \alpha
+\catcode `β = \active \let β \beta
+\catcode `γ = \active \let γ \gamma
+\catcode `δ = \active \let δ \delta
+\catcode `ε = \active \let ε \epsilon
+\catcode `ζ = \active \let ζ \zeta
+\catcode `η = \active \let η \eta
+\catcode `θ = \active \let θ \theta
+\catcode `ι = \active \let ι \iota
+\catcode `κ = \active \let κ \kappa
+\catcode `λ = \active \let λ \lambda
+\catcode `μ = \active \let μ \mu
+\catcode `ν = \active \let ν \nu
+\catcode `ξ = \active \let ξ \xi
+\catcode `ο = \active \let ο o
+\catcode `π = \active \let π \pi
+\catcode `ρ = \active \let ρ \rho
+\catcode `σ = \active \let σ \sigma
+\catcode `τ = \active \let τ \tau
+\catcode `υ = \active \let υ \upsilon
+\catcode `φ = \active \let φ \phi
+\catcode `χ = \active \let χ \chi
+\catcode `ψ = \active \let ψ \psi
+\catcode `ω = \active \let ω \omega
+
+\catcode `Α = \active \let Α A
+\catcode `Β = \active \let Β B
+\catcode `Γ = \active \let Γ \Gamma
+\catcode `Δ = \active \let Δ \Delta
+\catcode `Ε = \active \let Ε E
+\catcode `Ζ = \active \let Ζ Z
+\catcode `Η = \active \let Η H
+\catcode `Θ = \active \let Θ \Theta
+\catcode `Ι = \active \let Ι I
+\catcode `Κ = \active \let Κ K
+\catcode `Λ = \active \let Λ \Lambda
+\catcode `Μ = \active \let Μ M
+\catcode `Ν = \active \let Ν N
+\catcode `Ξ = \active \let Ξ \Xi
+\catcode `Ο = \active \let Ο O
+\catcode `Π = \active \let Π \Pi
+\catcode `Ρ = \active \let Ρ P
+\catcode `Σ = \active \let Σ \Sigma
+\catcode `Τ = \active \let Τ T
+\catcode `Υ = \active \let Υ \Upsilon
+\catcode `Φ = \active \let Φ \Phi
+\catcode `Χ = \active \let Χ X
+\catcode `Ψ = \active \let Ψ \Psi
+\catcode `Ω = \active \let Ω \Omega
+
+% other -----------------------------------------------------------------------
+
+\long\def \textAnswer #1{\answer{{\color{red!50!black}#1}}}
+
+\long\def \standardsSection #1{{
+  \section*{Standards}
+  \def\arraystretch{2}
+  \setlength\tabcolsep{1em}
+  \begin{tabular}{|r|l|}
+    \hline \textbf{Standard} & \textbf{Score} \\\hline #1
+  \end{tabular}
+}}
+\long\def \standards #1{{
+  \vspace{-1em}
+  \def\arraystretch{2}
+  \setlength\tabcolsep{1em}
+  \begin{tabular}{|r|l|}
+    \hline #1
+  \end{tabular}
+  \vspace{1em}
+}}
+\def \standard #1{
+  #1 & ~~~ \\\hline
+}
+
+% -----------------------------------------------------------------------------
+% }}}}}
+
+% -----------------------------------------------------------------------------
+% document
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\section*{Instructions}
+\begin{itemize}
+  \item Fill in your name and CWID on every page.
+\end{itemize}
+
+\standardsSection{
+  \standard{review :: general knowledge}
+  \standard{data types and representation}
+  \standard{operators}
+  \standard{control flow}
+}
+
+\vfill
+testing
+
+\newpage
+
+\section{Question}
+\standards{
+  \standard{review :: general knowledge}
+}
+
+Define or describe each of the following
+\begin{itemize}
+  \item C++ compilation process
+    \begin{itemize}
+      \item preprocess
+        \textAnswer{\\
+          \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/compile.html}
+        }
+        \vfill
+      \item compile
+        \textAnswer{\\
+          \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/compile.html}
+        }
+        \vfill
+      \item assmble
+        \textAnswer{\\
+          \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/compile.html}
+        }
+        \vfill
+      \item link
+        \textAnswer{\\
+          \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/compile.html}
+        }
+        \vfill
+    \end{itemize}
+  \item program execution process
+    \begin{itemize}
+      \item load
+        \textAnswer{\\
+          \url{https://en.wikipedia.org/wiki/Loader_(computing)}
+        }
+        \vfill
+      \item run
+        \textAnswer{\\
+          \url{https://en.wikipedia.org/wiki/Execution_(computing)}
+        }
+        \vfill
+    \end{itemize}
+  \item named constant vs object-like macro
+    (e.g.~\mintinline{cpp}{const int ten = 10;} vs
+    \mintinline{cpp}{#define TEN 10})
+    \textAnswer{\\
+      A named constant is like a variable except that its value cannot be
+      changed, while an object-like macro is (roughly) a string of code that
+      will be replaced by the preprocessor with some other string of code
+      before compilation.  This has many implications, depending on how each is
+      used, though in many simple cases (with compiler optimization on) the
+      generated code is the same.
+      \begin{itemize}
+        \item \url{http://duramecho.com/ComputerInformation/WhyHowCppConst.html}
+        \item \url{https://gcc.gnu.org/onlinedocs/cpp/Object-like-Macros.html#Object-like-Macros}
+      \end{itemize}
+    }
+    \vfill
+  \item bit, byte, word
+    \textAnswer{\\
+      \url{https://en.wikipedia.org/wiki/Bit}
+      \url{https://en.wikipedia.org/wiki/Byte}
+      \url{https://en.wikipedia.org/wiki/Word_(computer_architecture)}
+    }
+    \vfill
+\end{itemize}
+    testing
+
+\end{document}
+
