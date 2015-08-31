@@ -42,6 +42,16 @@
   (http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c)  
   Short answer: no; but you should (*always*) try to understand why
 
+
+## Tutorials
+
+- [GitHub Help / Bootcamp / Fork A Repo]
+  (https://help.github.com/articles/fork-a-repo/)
+
+- [GitHub Help / Collaborating / Using pull requests]
+  (https://help.github.com/articles/using-pull-requests)
+
+
 ## Administrative
 
 - [University Catalog: Computer Science, B.S.]

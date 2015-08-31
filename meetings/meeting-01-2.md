@@ -12,8 +12,6 @@
     - Would after Tuesday lecture be a good time for my office hour?
     - Comments, suggestions, concerns?
 
-## Quiz?
-
 ## Activity
 
 ### [Fizz Buzz](http://c2.com/cgi/wiki?FizzBuzzTest)
