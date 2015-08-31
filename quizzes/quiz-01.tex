@@ -5,12 +5,14 @@
 % License] (http://creativecommons.org/licenses/by/4.0/)  
 % -----------------------------------------------------------------------------
 
-\def \docTitle  {Quiz 01}
-
 % -----------------------------------------------------------------------------
 % document setup
 % -----------------------------------------------------------------------------
 % {{{{{
+
+\def \docTitle  {\directlua{
+    s='\jobname'; tex.print( s:sub(1,1):upper()..s:sub(2,4), s:sub(6,7))
+}}
 
 \def \docAuthor {\question{Name:\hfill{}CWID:\hfill{}}\answer{Answer Key}}
 \def \docClass  {CPSC 121-11}
@@ -18,22 +20,6 @@
 \def \docTerm   {CSUF Fall 2015}
 
 \def \docCopyright {{
-  \tiny
-%   \vfill
-%   \vspace{\parskip}
-%   {\answer{\color{red}}\question{\color{.}}\hrule}
-%   \vspace{0\parskip}
-  \begin{minipage}[c]{0.10\textwidth} \vspace{0ex}
-    \includegraphics[height=5ex]{images/ccby}
-  \end{minipage}
-  \begin{minipage}[c]{0.90\textwidth} \vspace{0ex}
-    Copyright \copyright{} Ben Blazak \url{bblazak@fullerton.edu}\\
-    This work is licensed under a Creative Commons Attribution 4.0
-    International License \url{http://creativecommons.org/licenses/by/4.0/}
-  \end{minipage}
-%   \vspace{-2.5\parskip}
-}}
-\def \docCopyrightTest {{
   \tiny
   \vfill
   \vspace{\parskip}
@@ -70,6 +56,7 @@
 \usepackage{lastpage}
 \usepackage{minted}
 \usepackage{tikz}
+\usepackage[explicit]{titlesec}
 \usepackage{url}
 
 \usepackage[T1]{fontenc}
@@ -88,6 +75,11 @@
 \setlength{\parskip}{1ex}
 
 \setlist[itemize]{nosep,itemsep=.5ex,parsep=.5ex}
+
+% sections --------------------------------------------------------------------
+
+% - <http://tex.stackexchange.com/a/58299>
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
 
 % math ------------------------------------------------------------------------
 
@@ -121,21 +113,6 @@
 \fancyhead[R]{{\color{.}\docTerm\\\docTitle}}
 
 \fancyfoot[C]{\thepage{} of \pageref{LastPage}}
-
-\fancypagestyle{firstpage}{
-%   \vskip -4ex \vskip -.8pt  % height of the copyright block
-  \renewcommand{\footrule}{{
-    \vskip 1ex
-    {\answer{\color{red}}\question{\color{.}}
-     \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}
-    \vskip .5ex
-    \docCopyright{}
-    \vskip .5ex
-    \vskip -.125in
-    {\answer{\color{red}}\question{\color{.}}
-     \vskip 0.5ex \hrule height 0.4pt \vskip 0.5ex}
-  }}
-}
 
 % -----------------------------------------------------------------------------
 % macros
@@ -229,7 +206,11 @@
   \begin{tabular}{|r|l|}
     \hline \textbf{Standard} & \textbf{Score} \\\hline #1
   \end{tabular}
-}}
+  \docCopyright
+  \newpage
+}
+  \def\docCopyright{}
+}
 \long\def \standards #1{{
   \vspace{-1em}
   \def\arraystretch{2}
@@ -251,24 +232,6 @@
 % -----------------------------------------------------------------------------
 
 \begin{document}
-\thispagestyle{firstpage}
-
-\section*{Instructions}
-\begin{itemize}
-  \item Fill in your name and CWID on every page.
-\end{itemize}
-
-\standardsSection{
-  \standard{review :: general knowledge}
-  \standard{data types and representation}
-  \standard{operators}
-  \standard{control flow}
-}
-
-\vfill
-testing
-
-\newpage
 
 \section{Question}
 \standards{
@@ -335,9 +298,8 @@ Define or describe each of the following
       \url{https://en.wikipedia.org/wiki/Byte}
       \url{https://en.wikipedia.org/wiki/Word_(computer_architecture)}
     }
-    \vfill
 \end{itemize}
-    testing
 
+\docCopyright
 \end{document}
 
