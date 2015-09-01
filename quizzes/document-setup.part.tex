@@ -7,6 +7,13 @@
 % - [Which lua environment should I use?] (http://tex.stackexchange.com/a/33102)
 \directlua{require('scripts/functions.lua')}
 
+\ifx\question\undefined
+  \long\def \question #1{#1}
+\fi
+\ifx\answer\undefined
+  \long\def \answer #1{#1}
+\fi
+
 % -----------------------------------------------------------------------------
 
 \def \docTitle  {\directlua{doc_title('\jobname')}}
@@ -54,7 +61,6 @@
 \usepackage{minted}
 \usepackage{tikz}
 \usepackage[explicit]{titlesec}
-\usepackage{url}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -62,6 +68,10 @@
 
 \usepackage{xcolor}
 \usepackage[framemethod=TikZ]{mdframed}
+
+% - [Illegal parameter number in definition of \Hy@tempa]
+%   (https://kba49.wordpress.com/2013/04/12/illegal-parameter-number-in-definition-of-hytempa/)
+\usepackage{hyperref}
 
 % text ------------------------------------------------------------------------
 
@@ -195,6 +205,7 @@
 % other -----------------------------------------------------------------------
 
 \long\def \textAnswer #1{\answer{{\color{red!50!black}#1}}}
+\long\def \textQuestion #1{\question{{\color{.}#1}}}
 
 \long\def \standardsSection #1{{
   \section*{Standards}
@@ -220,4 +231,24 @@
 \def \standard #1{
   #1 & ~~~ \\\hline
 }
+
+\def \program #1{{
+  \def \lCodedir{\directlua{doc_name('\jobname')}}
+  \def \lCode{./code/\lCodedir/#1.cpp}
+  \def \lQuestion{./code/\lCodedir/#1.gen.question.txt}
+  \def \lAnswer{./code/\lCodedir/#1.gen.answer.txt}
+  %
+  \inputminted[frame=single]{cpp}{\lCode}
+  \textQuestion{
+    \inputminted[frame=single,
+                 label={\normalsize{}Output},
+                 fontsize=\Large,
+                ]{text}{\lQuestion}
+  }
+  \textAnswer{
+    \inputminted[frame=single,
+                 label={Output},
+                ]{text}{\lAnswer}
+  }
+}}
 

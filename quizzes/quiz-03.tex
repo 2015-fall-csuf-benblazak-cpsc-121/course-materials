@@ -1,0 +1,130 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{data types and representation}
+}
+
+\begin{itemize}
+
+  \item List the three arithmetic types most commonly used to store numbers,
+    along with an example of a literal of each type, and the number of bits
+    typically used to store them on a 32- or 64-bit system.
+    \textAnswer{\par
+      \begin{itemize}
+        \item \url{http://en.cppreference.com/w/cpp/language/types}
+        \item \url{http://en.cppreference.com/w/cpp/language/floating_literal}
+      \end{itemize}
+      \vspace{\parskip}
+      \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Type} & \textbf{Literal} & \textbf{Size} \\\hline
+        \mintinline{cpp}{int} & \mintinline{cpp}{3} & 32 bits \\\hline
+        \mintinline{cpp}{float} & \mintinline{cpp}{3.14F} & 32 bits \\\hline
+        \mintinline{cpp}{double} & \mintinline{cpp}{3.14} & 64 bits \\\hline
+      \end{tabular}
+    }
+    \vfill
+    \vfill
+
+  \item List the type most commonly used to store a single character, along
+    with an example of a literal of this type, and the number of bits typically
+    used to store it on a 32- or 64-bit system.
+    \textAnswer{\par
+      \begin{itemize}
+        \item \url{http://stackoverflow.com/a/9727504}
+        \item The \mintinline{cpp}{char} type is required to be large enough to
+          represent 256 different values (in order to be suitable for storing
+          UTF-8 encoded data) since C++14:
+          \url{http://en.cppreference.com/w/cpp/language/types}
+      \end{itemize}
+      \vspace{\parskip}
+      \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Type} & \textbf{Literal} & \textbf{Size} \\\hline
+        \mintinline{cpp}{char}
+        & \mintinline{cpp}{'b'}
+        & 1 byte, which is usually 8 bits
+          \\\hline
+      \end{tabular}
+    }
+    \vfill
+
+  \item List the type most commonly used to store \mintinline{cpp}{true} or
+    \mintinline{cpp}{false} values.
+    \textAnswer{\\
+      Answer: \mintinline{cpp}{bool}
+    }
+    \vfill
+
+  \item List the most common non-fundamental type you've seen so far (i.e.~the
+    first and probably only type seen in CPSC 120 that requires its own
+    \mintinline{cpp}{#include} directive).
+    \textAnswer{\\
+      Answer: \mintinline{cpp}{string}
+    }
+    \vfill
+
+  \item What four type modifiers (or five in C++11) may be applied to integral
+    types (e.g.~to make the type larger or smaller, or capable of representing
+    negative values)?
+    \textAnswer{\\
+      \url{http://en.cppreference.com/w/cpp/language/types}
+    }
+    \vfill
+
+  \item Is the type most commonly used to store a single character an integral
+    type?  (Hint: Can we apply the integral type modifiers to it?)
+    \textAnswer{\\
+      \url{http://en.cppreference.com/w/cpp/language/type}
+    }
+    \vfill
+
+  \item What is returned by \mintinline{cpp}{sizeof(char)}?
+    \textAnswer{\\
+      \url{http://en.cppreference.com/w/cpp/language/sizeof}
+    }
+    \vfill
+
+  \item Convert the following into binary\footnote{Notation for binary literals
+    standardized since C++14:
+    \url{http://en.cppreference.com/w/cpp/language/integer_literal}},
+    decimal, and hexadecimal:
+    \begin{itemize}
+
+      \item \mintinline{cpp}{0b0100}
+        \textAnswer{\\
+          Answer: \mintinline{cpp}{0b0100 == 4 == 0x4}
+        }
+        \textQuestion{\vspace{2ex}}
+
+      \item \mintinline{cpp}{5}
+        \textAnswer{\\
+          Answer: \mintinline{cpp}{0b0101 == 5 == 0x5}
+        }
+        \textQuestion{\vspace{2ex}}
+
+      \item \mintinline{cpp}{0xB}
+        \textAnswer{\\
+          Answer: \mintinline{cpp}{0b1011 == 11 == 0xB}
+        }
+        \textQuestion{\vspace{2ex}}
+
+    \end{itemize}
+    \vspace{1ex}
+
+\end{itemize}
+
+\end{document}
+

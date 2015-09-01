@@ -4,9 +4,10 @@
 # -----------------------------------------------------------------------------
 
 TEX := $(wildcard *.tex)
+GEN := $(wildcard *.gen.*)
 TEX := $(filter-out %.part.tex,$(TEX))
-TEX := $(filter-out %.gen.tex,$(TEX))
-TEX := $(TEX:%.tex=%.questions.gen.tex) $(TEX:%.tex=%.answers.gen.tex)
+TEX := $(filter-out $(GEN),$(TEX))
+TEX := $(TEX:%.tex=%.gen.questions.tex) $(TEX:%.tex=%.gen.answers.tex)
 PDF := $(TEX:%.tex=%.pdf)
 
 # -----------------------------------------------------------------------------
@@ -15,12 +16,20 @@ PDF := $(TEX:%.tex=%.pdf)
 all: $(PDF)
 
 clean:
-	latexmk --shell-escape -lualatex -pdf -c $(TEX)
-	-rm *.out.pyg *.fls
+	for i in `find ./code/ -type d`; do \
+		( cd $$i; make clean; ); \
+	done; \
+	#
+	-latexmk --shell-escape -lualatex -pdf -c *.tex
+	-rm *.pyg *.fls
 
 cleanall: clean
-	latexmk --shell-escape -lualatex -pdf -C $(TEX)
-	-rm *.gen.tex
+	for i in `find ./code/ -type d`; do \
+		( cd $$i; make cleanall; ); \
+	done; \
+	#
+	-latexmk --shell-escape -lualatex -pdf -C *.tex
+	-rm *.gen.*
 
 # -----------------------------------------------------------------------------
 .PHONY: view-standards
@@ -31,14 +40,14 @@ view-standards:
 # -----------------------------------------------------------------------------
 .SECONDARY: $(TEX)
 
-%.questions.gen.tex: %.tex makefile
+%.gen.questions.tex: %.tex makefile
 	( echo '\\long\\def \\question #1{#1}'; \
 	  echo '\\long\\def \\answer #1{}'; \
 	  echo '\\input{$<}'; \
 	  echo; \
 	) > '$@'
 
-%.answers.gen.tex: %.tex makefile
+%.gen.answers.tex: %.tex makefile
 	( echo '\\long\\def \\question #1{}'; \
 	  echo '\\long\\def \\answer #1{#1}'; \
 	  echo '\\input{$<}'; \
@@ -47,6 +56,10 @@ view-standards:
 
 # -----------------------------------------------------------------------------
 
-%.pdf: %.tex document-setup.part.tex scripts/functions.lua
+%.pdf: %.tex document-setup.part.tex ./scripts/functions.lua
+	i="`echo '$*' | cut -d '.' -f 1`"; \
+	if [ -d "./code/$$i/" ]; then (cd "./code/$$i/"; make;); fi; \
+	#
 	latexmk --shell-escape -lualatex -pdf '$<'
+	touch '$@'  # for when latexmk (rightly) does nothing
 
