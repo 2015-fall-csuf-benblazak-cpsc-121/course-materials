@@ -1,26 +1,15 @@
 # Administrative
-- Math salute!
-- Mention about email
-- Quizzes next class
-    - review :: general knowledge
-    - operators
-    - control flow
-- Quiz next lab
-    - visual studio
-- Standards for next week
-    - arrays
-    - functions
-    - file I/O
+- assignment-01 is due tonight by 11pm
+- The requirements for assignment-02 (sieve of eratosthenes) will be written
+  soon, and it will probably be due by 11pm next Thursday
 
 # Discussion
-- review :: general knowledge
-- data types and representation
+- Linux!
+- GitHub and assignment submission
 
-# Quiz 03 (data types and representation)
-
-# Discussion
-- operators
-- control flow
+# Quiz 02 (visual studio)
+- I'll be walking around testing people one by one.  Feel free to practice
+  while you're waiting.
 
 
 -------------------------------------------------------------------------------

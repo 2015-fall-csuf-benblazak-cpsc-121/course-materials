@@ -1,26 +1,26 @@
 # Administrative
 - Math salute!
-- Mention about email
-- Quizzes next class
-    - review :: general knowledge
-    - operators
-    - control flow
-- Quiz next lab
-    - visual studio
+- Ask about email
 - Standards for next week
     - arrays
     - functions
     - file I/O
+- How should we do quizzes next week?
+    - Quizzes split between Tuesday and Thursday?
+    - Review day on Tuesday, all quizzes on Thursday?
+    - All Quizzes on Tuesday, and something else on Thursday?
 
 # Discussion
-- review :: general knowledge
-- data types and representation
+- Questions about "review :: general knowledge"?
+- Questions about "operators"?
+- Questions about "control flow"?
+    - Should we postpone this quiz till next week?
 
-# Quiz 03 (data types and representation)
+# Quiz 01 (review :: general knowledge)
 
-# Discussion
-- operators
-- control flow
+# Quiz 04 (operators)
+
+# Quiz 05 (control flow)
 
 
 -------------------------------------------------------------------------------
