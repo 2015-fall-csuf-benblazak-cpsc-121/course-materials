@@ -13,8 +13,15 @@
 # Discussion
 - Questions about "review :: general knowledge"?
 - Questions about "operators"?
+    - prefix and postfix increment and decrement
+    - evaluating "piece by piece"
 - Questions about "control flow"?
     - Should we postpone this quiz till next week?
+    - `if ... else`
+    - `switch`
+    - `for`
+    - `while`
+    - `do ... while`
 
 # Quiz 01 (review :: general knowledge)
 
