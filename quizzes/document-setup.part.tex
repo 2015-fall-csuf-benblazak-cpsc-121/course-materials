@@ -204,6 +204,9 @@
 
 % other -----------------------------------------------------------------------
 
+\def \myCodeDir {./code/\directlua{doc_name('\jobname')}/}
+\def \myImageDir {./images/\directlua{doc_name('\jobname')}/}
+
 \long\def \textAnswer #1{\answer{{\color{red!50!black}#1}}}
 \long\def \textQuestion #1{\question{{\color{.}#1}}}
 
@@ -232,23 +235,43 @@
   #1 & ~~~ \\\hline
 }
 
-\def \program #1{{
-  \def \lCodedir{\directlua{doc_name('\jobname')}}
-  \def \lCode{./code/\lCodedir/#1.cpp}
-  \def \lQuestion{./code/\lCodedir/#1.gen.question.txt}
-  \def \lAnswer{./code/\lCodedir/#1.gen.answer.txt}
-  %
-  \inputminted[frame=single]{cpp}{\lCode}
+\def \code #1{
+  \inputminted[frame=single]{cpp}{\myCodeDir/#1}
+}
+\def \output #1{
+  \inputminted[frame=single,label={Output}]{cpp}{\myCodeDir/#1}
+}
+\def \outputLarge #1{
+  \inputminted[frame=single,label={\normalsize{}Output},fontsize=\Large]{cpp}{\myCodeDir/#1}
+}
+\def \codeTop #1{
+  \par
+  \code{#1.cpp}
   \textQuestion{
-    \inputminted[frame=single,
-                 label={\normalsize{}Output},
-                 fontsize=\Large,
-                ]{text}{\lQuestion}
+    \write18{sed 's/.*/ /' '#1.gen.txt' > '#1.temp.txt'}
+    \outputLarge{#1.temp.txt}
+    \write18{rm '#1.temp.txt'}
   }
   \textAnswer{
-    \inputminted[frame=single,
-                 label={Output},
-                ]{text}{\lAnswer}
+    \outputLarge{#1.gen.txt}
   }
-}}
+  \par
+}
+\def \codeLeft #1{
+  \par
+  \begin{minipage}[t]{0.5\textwidth} \vspace{0ex}
+    \code{#1.cpp}
+  \end{minipage}
+  \begin{minipage}[t]{0.5\textwidth} \vspace{0ex}
+    \textQuestion{
+      \write18{sed 's/.*/ /' '#1.cpp' > '#1.temp.txt'}
+      \output{#1.temp.txt}
+      \write18{rm '#1.temp.txt'}
+    }
+    \textAnswer{
+      \output{#1.gen.txt}
+    }
+  \end{minipage}
+  \par
+}
 
