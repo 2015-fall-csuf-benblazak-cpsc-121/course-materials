@@ -9,6 +9,7 @@
     - Quizzes split between Tuesday and Thursday?
     - Review day on Tuesday, all quizzes on Thursday?
     - All Quizzes on Tuesday, and something else on Thursday?
+    - **decision** Review day on Tuesday, all quizzes on Thursday
 
 # Discussion
 - Questions about "review :: general knowledge"?
@@ -17,6 +18,7 @@
     - evaluating "piece by piece"
 - Questions about "control flow"?
     - Should we postpone this quiz till next week?
+    - **decision** yes, this quiz will be on Thursday
     - `if ... else`
     - `switch`
     - `for`
@@ -26,8 +28,6 @@
 # Quiz 01 (review :: general knowledge)
 
 # Quiz 04 (operators)
-
-# Quiz 05 (control flow)
 
 
 -------------------------------------------------------------------------------
