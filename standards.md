@@ -15,9 +15,6 @@
 - review (15%)
     - [general knowledge][]
     - visual studio
-        - terminal I/O
-        - file I/O
-        - project with multiple .h and .c files
     - data types and representation
     - operators
     - control flow

@@ -3,10 +3,6 @@
 - The requirements for assignment-02 (sieve of eratosthenes) will be written
   soon, and it will probably be due by 11pm next Thursday
 
-# Discussion
-- Linux!
-- GitHub and assignment submission
-
 # Quiz 02 (visual studio)
 - I'll be walking around testing people one by one.  Feel free to practice
   while you're waiting.
