@@ -3,13 +3,14 @@
 -- Released under the [MIT License] (http://opensource.org/licenses/MIT)
 -------------------------------------------------------------------------------
 
-function doc_name(s)
-  s = s:gsub( '(%a+-%d+).*', '%1' )
+function strip_extensions(s)
+  s = s:gsub( '%..*', '' )
   tex.print(s)
 end
 
 function doc_title(s)
-  s = s:gsub( '(%a)(%a+)-(%d+).*', '%1%2 %3' ):gsub( '^%l', string.upper )
+  s = s:gsub( '%..*', '' ):gsub( '-', ' ' )
+  s = s:gsub( '^%l', string.upper ):gsub( ' %l', string.upper )
   tex.print(s)
 end
 

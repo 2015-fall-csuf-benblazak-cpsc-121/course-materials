@@ -4,9 +4,8 @@
 # -----------------------------------------------------------------------------
 
 TEX := $(wildcard *.tex)
-GEN := $(wildcard *.gen.*)
 TEX := $(filter-out %.part.tex,$(TEX))
-TEX := $(filter-out $(GEN),$(TEX))
+TEX := $(filter-out $(wildcard *.gen.*),$(TEX))
 TEX := $(TEX:%.tex=%.gen.questions.tex) $(TEX:%.tex=%.gen.answers.tex)
 PDF := $(TEX:%.tex=%.pdf)
 
