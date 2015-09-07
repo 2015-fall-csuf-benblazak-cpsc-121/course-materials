@@ -21,8 +21,8 @@ Midterm: Thursday, October 15, during normally scheduled lecture and lab
 Final Exam: Thursday, December 17, from 09:30--11:20, in CS 110B
 
 ### Office hours
-|   |   |
-|---|---|
+|   |   |   |
+|---|---|---|
 Tu | 09:30--10:30 | CS 303
 
 And by appointment.
