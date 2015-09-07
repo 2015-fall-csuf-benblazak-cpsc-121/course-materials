@@ -1,4 +1,4 @@
-# Administrative
+## Administrative
 - Math salute!
 - Ask about email
 - Standards for next week
@@ -11,7 +11,7 @@
     - All Quizzes on Tuesday, and something else on Thursday?
     - **decision** Review day on Tuesday, all quizzes on Thursday
 
-# Discussion
+## Discussion
 - Questions about "review :: general knowledge"?
 - Questions about "operators"?
     - prefix and postfix increment and decrement
@@ -25,9 +25,9 @@
     - `while`
     - `do ... while`
 
-# Quiz 01 (review :: general knowledge)
+## Quiz 01 (review :: general knowledge)
 
-# Quiz 04 (operators)
+## Quiz 04 (operators)
 
 
 -------------------------------------------------------------------------------

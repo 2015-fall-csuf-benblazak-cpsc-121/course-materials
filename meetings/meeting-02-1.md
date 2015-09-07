@@ -1,4 +1,4 @@
-# Administrative
+## Administrative
 - Math salute!
 - Mention about email
 - Quizzes next class
@@ -12,13 +12,13 @@
     - functions
     - file I/O
 
-# Discussion
+## Discussion
 - review :: general knowledge
 - data types and representation
 
-# Quiz 03 (data types and representation)
+## Quiz 03 (data types and representation)
 
-# Discussion
+## Discussion
 - operators
 - control flow
 

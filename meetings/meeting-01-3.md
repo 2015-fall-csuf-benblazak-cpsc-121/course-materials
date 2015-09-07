@@ -5,12 +5,12 @@
 
 ## Demo
 - GitHub
-    - Fix error in [assignment-01](../../../assignment-01)/readme.md
+    - Fix error in [assignment-01](../../../../assignment-01)/readme.md
     - Demonstrate submitting an assignment via pull request
 
 ## Activity
 - Git and GitHub familiarization
-- [assignment-01](../../../assignment-01)
+- [assignment-01](../../../../assignment-01)
 
 
 -------------------------------------------------------------------------------
