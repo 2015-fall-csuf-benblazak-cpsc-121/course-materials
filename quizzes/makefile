@@ -20,7 +20,7 @@ clean:
 	done; \
 	#
 	-latexmk --shell-escape -lualatex -pdf -c *.tex
-	-rm *.pyg *.fls
+	-rm -r *.fls _minted-*
 
 cleanall: clean
 	for i in `find ./code/ -type d`; do \
@@ -28,7 +28,7 @@ cleanall: clean
 	done; \
 	#
 	-latexmk --shell-escape -lualatex -pdf -C *.tex
-	-rm *.gen.*
+	-rm -r *.gen.*
 
 # -----------------------------------------------------------------------------
 .PHONY: view-standards
@@ -60,5 +60,5 @@ view-standards:
 	if [ -d "./code/$$i/" ]; then (cd "./code/$$i/"; make;); fi; \
 	#
 	latexmk --shell-escape -lualatex -pdf '$<'
-	touch '$@'  # for when latexmk (rightly) does nothing
+	touch '$@'  # for when latexmk does nothing
 

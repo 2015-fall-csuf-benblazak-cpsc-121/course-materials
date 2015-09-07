@@ -5,35 +5,49 @@
 # -----------------------------------------------------------------------------
 
 import os.path
+import re
 import sys
 
 def gen_section(filepath, line_comment_begin):
-    begin = line_comment_begin + ' SECTION BEGIN '
-    end = line_comment_begin + ' SECTION END '
+    section_re = line_comment_begin + r'\s*SECTION'
+    begin_re   = r'\s+BEGIN'
+    end_re     = r'\s+END'
+    name_re    = r'\s+([\w-]+)'
 
-    sections_lines = { '':'' }
-    sections_open = { '' }
-    sections_strip = { '':0 }
+    section = re.compile( section_re )
+    begin   = re.compile( section_re + begin_re + name_re )
+    end     = re.compile( section_re + end_re + name_re )
+
+    sections_lines  = { 'all':'' }  # the lines of text, for every section
+    sections_open   = { 'all' }     # sections currently being processed
+    sections_indent = { 'all':0 }   # number of initial characters to discard
 
     f = open(filepath)
 
+    line_number = 0;
     for line in f:
-        if begin in line:
-            name = line[line.find(begin)+len(begin):-1].replace(' ','-')
+        line_number += 1
+        if begin.search(line):
+            name = begin.search(line).group(1)
             sections_lines[name] = ''
             sections_open.add(name)
-            sections_strip[name] = line.find(begin)
-        elif end in line:
-            name = line[line.find(end)+len(end):-1].replace(' ','-')
-            sections_open.remove(name)
+            sections_indent[name] = re.search( r'\S', line ).start()
+        elif end.search(line):
+            name = end.search(line).group(1)
+            if name in sections_open:
+                sections_open.remove(name)
         else:
+            if section.search(line):
+                raise Exception( 'Illegal SECTION in input file '
+                                 + '"' + filepath + '", '
+                                 + 'line ' + str(line_number) )
             for name in sections_open:
-                sections_lines[name] += line[sections_strip[name]:]
+                sections_lines[name] += line[sections_indent[name]:] or '\n'
 
     f.close()
 
     for s in sections_lines:
-        newpath = filepath + '.gen.section' + ('-' if s else '') + s
+        newpath = filepath + '.gen.section.' + s
         f = open(newpath,'w')
         f.write(sections_lines[s])
         f.close()

@@ -237,60 +237,66 @@
   #1 & ~~~ \\\hline
 }
 
-\def \evaluateCodeTop #1{
+\def \evaluateCodeTop #1#2{
+  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
   \par
-  \inputminted{cpp}{\docCodeDir/#1.cpp}
+  \inputminted{cpp}{\codeFile}
   \textQuestion{
     \inputminted[label={\normalsize{}Output},fontsize=\Large]{text}
-      {\docCodeDir/#1.gen.output.gen.blank}
+      {\docCodeDir/\outputFile.gen.blank}
   }
   \textAnswer{
     \inputminted[label={\normalsize{}Output},fontsize=\Large]{text}
-      {\docCodeDir/#1.gen.output}
+      {\docCodeDir/\outputFile}
   }
   \par
 }
-\def \evaluateCodeLeft #1{
+\def \evaluateCodeLeft #1#2{
+  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
   \par
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
     \inputminted{cpp}{\docCodeDir/#1.cpp}
   \end{minipage}
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
     \textQuestion{
-      \inputminted[label=Output]{text}{\docCodeDir/#1.cpp.gen.blank}
+      \inputminted[label=Output]{text}{\codeFile.gen.blank}
     }
     \textAnswer{
-      \inputminted[label=Output]{text}{\docCodeDir/#1.gen.output}
+      \inputminted[label=Output]{text}{\outputFile}
     }
   \end{minipage}
   \par
 }
 
-\def \showCodeTop #1#2{{
-  \if\relax\noexpand#2\relax
-    \def\suffix{.gen.section}
-  \else
-    \def\suffix{.gen.section-#2}
-  \fi
+\def \showCodeTop #1#2{
+  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
   \par
-  \inputminted{cpp}{\docCodeDir/#1.cpp\suffix}
+  \inputminted{cpp}{\codeFile}
   \vspace{0.5\parskip}
-  \inputminted[label=Output]{text}{\docCodeDir/#1.gen.output}
+  \inputminted[label=Output]{text}{\outputFile}
   \par
-}}
-\def \showCodeLeft #1#2{{
-  \if\relax\noexpand#2\relax
-    \def\suffix{.gen.section}
-  \else
-    \def\suffix{.gen.section-#2}
-  \fi
+}
+\def \showCodeLeft #1#2{
+  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
   \par
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
-    \inputminted{cpp}{\docCodeDir/#1.cpp\suffix}
+    \inputminted{cpp}{\codeFile}
   \end{minipage}
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
-    \inputminted[label=Output]{text}{\docCodeDir/#1.gen.output}
+    \inputminted[label=Output]{text}{\outputFile}
   \end{minipage}
   \par
-}}
+}
 

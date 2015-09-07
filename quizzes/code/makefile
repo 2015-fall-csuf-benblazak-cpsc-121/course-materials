@@ -6,8 +6,10 @@
 CPP := $(wildcard *.cpp)
 
 OUTPUT := $(CPP:%.cpp=%.gen.output)
-SECTION := $(CPP:%=%.gen.section)  # and possible some *.section-* files too
 BLANK := $(CPP:%=%.gen.blank) $(OUTPUT:%=%.gen.blank)
+
+# possibly incomplete list of section files
+SECTION := $(CPP:%=%.gen.section.all) $(OUTPUT:%=%.gen.section.all)
 
 # -----------------------------------------------------------------------------
 .PHONY: all clean cleanall
@@ -18,7 +20,7 @@ clean:
 	-rm *.gen.exe
 
 cleanall: clean
-	-rm *.gen.*
+	-rm -r *.gen.*
 
 # -----------------------------------------------------------------------------
 
@@ -28,8 +30,9 @@ cleanall: clean
 %.gen.output: %.gen.exe
 	./'$<' > '$@'
 
-%.gen.section: %
+%.gen.section.all: %
 	../../scripts/gen-section.py '$<' '//'
+	for i in $*.gen.section.*; do make "$$i.gen.blank"; done
 
 %.gen.blank: %
 	sed 's/.*/ /' '$<' > '$@'
