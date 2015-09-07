@@ -5,11 +5,11 @@
 
 CPP := $(wildcard *.cpp)
 
-OUTPUT := $(CPP:%.cpp=%.gen.output)
-BLANK := $(CPP:%=%.gen.blank) $(OUTPUT:%=%.gen.blank)
+OUTPUT := $(CPP:%.cpp=.%.gen.output)
+BLANK := $(CPP:%=.%.gen.blank) $(OUTPUT:%=%.gen.blank)
 
 # possibly incomplete list of section files
-SECTION := $(CPP:%=%.gen.section.all) $(OUTPUT:%=%.gen.section.all)
+SECTION := $(CPP:%=.%.gen.section.all) $(OUTPUT:%=%.gen.section.all)
 
 # -----------------------------------------------------------------------------
 .PHONY: all clean cleanall
@@ -17,12 +17,14 @@ SECTION := $(CPP:%=%.gen.section.all) $(OUTPUT:%=%.gen.section.all)
 all: $(OUTPUT) $(SECTION) $(BLANK)
 
 clean:
-	-rm *.gen.exe
+	-rm -r .*.gen.* *.gen.*
 
 cleanall: clean
-	-rm -r *.gen.*
 
 # -----------------------------------------------------------------------------
+
+.%.cpp: %.cpp
+	cp '$<' '$@'
 
 %.gen.exe: %.cpp
 	clang++ -o '$@' '$<'

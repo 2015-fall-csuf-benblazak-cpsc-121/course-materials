@@ -3,14 +3,14 @@
 -- Released under the [MIT License] (http://opensource.org/licenses/MIT)
 -------------------------------------------------------------------------------
 
-function strip_extensions(s)
-  s = s:gsub( '%..*', '' )
-  tex.print(s)
+function jobname_root(s)
+  s = s:gsub( '^%.', '' ):gsub( '%..*', '' )
+  return s
 end
 
 function doc_title(s)
-  s = s:gsub( '%..*', '' ):gsub( '-', ' ' )
+  s = jobname_root(s):gsub( '-', ' ' )
   s = s:gsub( '^%l', string.upper ):gsub( ' %l', string.upper )
-  tex.print(s)
+  return s
 end
 

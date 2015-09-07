@@ -16,7 +16,7 @@
 
 % -----------------------------------------------------------------------------
 
-\def \docTitle  {\directlua{doc_title('\jobname')}}
+\def \docTitle  {\directlua{tex.print(doc_title('\jobname'))}}
 \def \docAuthor {\question{Name:\hfill{}CWID:\hfill}\answer{Answer Key}}
 \def \docClass  {CPSC 121-11}
 \def \docSchool {~}
@@ -59,7 +59,7 @@
 \usepackage{etoolbox}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{minted}
+\usepackage[cachedir={.minted-\jobname}]{minted}
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage[explicit]{titlesec}
@@ -206,8 +206,8 @@
 
 % other -----------------------------------------------------------------------
 
-\def \docCodeDir {./code/\directlua{strip_extensions('\jobname')}/}
-\def \docImageDir {./images/\directlua{strip_extensions('\jobname')}/}
+\def \docCodeDir {./code/\directlua{tex.print(jobname_root('\jobname'))}/}
+\def \docImageDir {./images/\directlua{tex.print(jobname_root('\jobname'))}/}
 
 \long\def \textAnswer #1{\answer{{\color{red!50!black}#1}}}
 \long\def \textQuestion #1{\question{{\color{.}#1}}}
@@ -238,30 +238,30 @@
 }
 
 \def \evaluateCodeTop #1#2{
-  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
   \par
   \inputminted{cpp}{\codeFile}
   \textQuestion{
     \inputminted[label={\normalsize{}Output},fontsize=\Large]{text}
-      {\docCodeDir/\outputFile.gen.blank}
+      {\outputFile.gen.blank}
   }
   \textAnswer{
     \inputminted[label={\normalsize{}Output},fontsize=\Large]{text}
-      {\docCodeDir/\outputFile}
+      {\outputFile}
   }
   \par
 }
 \def \evaluateCodeLeft #1#2{
-  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
   \par
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
-    \inputminted{cpp}{\docCodeDir/#1.cpp}
+    \inputminted{cpp}{\codeFile}
   \end{minipage}
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
     \textQuestion{
@@ -275,10 +275,10 @@
 }
 
 \def \showCodeTop #1#2{
-  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
   \par
   \inputminted{cpp}{\codeFile}
   \vspace{0.5\parskip}
@@ -286,10 +286,10 @@
   \par
 }
 \def \showCodeLeft #1#2{
-  \def\codeFile{\docCodeDir/#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/#1.gen.output.gen.section.all}}
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
   \par
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
     \inputminted{cpp}{\codeFile}
