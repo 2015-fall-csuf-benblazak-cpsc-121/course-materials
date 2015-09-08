@@ -7,7 +7,7 @@ TEX := $(wildcard *.tex)
 TEX := $(filter-out %.part.tex,$(TEX))
 TEX := $(filter-out $(wildcard *.gen.*),$(TEX))
 TEX := $(TEX:%.tex=.%.gen.questions.tex) $(TEX:%.tex=.%.gen.answers.tex)
-PDF := $(TEX:%.tex=%.pdf) $(TEX:.%.tex=%.pdf)
+PDF := $(TEX:.%.tex=%.pdf)
 
 # -----------------------------------------------------------------------------
 .PHONY: all clean cleanall
@@ -37,7 +37,7 @@ list-standards:
 	@grep --color -r ' \\standard{' *
 
 # -----------------------------------------------------------------------------
-.SECONDARY: $(TEX)
+.SECONDARY: $(TEX) $(TEX:%.tex=%.pdf)
 
 %.pdf: .%.pdf
 	cp '$<' '$@'

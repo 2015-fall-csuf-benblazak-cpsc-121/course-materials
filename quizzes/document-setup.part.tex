@@ -53,6 +53,7 @@
             footskip=.25in,
            ]{geometry}
 
+\usepackage[export]{adjustbox}
 \usepackage[fleqn]{amsmath}
 \usepackage{amssymb}
 \usepackage[shortlabels]{enumitem}
@@ -87,7 +88,9 @@
 % sections --------------------------------------------------------------------
 
 % - <http://tex.stackexchange.com/a/58299>
-\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
+\titleformat{name=\section}[block]{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
+% - <http://tex.stackexchange.com/a/102120>
+\titleformat{name=\section,numberless}[block]{\normalfont\Large\bfseries}{}{0em}{#1}
 
 % math ------------------------------------------------------------------------
 

@@ -35,7 +35,7 @@ inoremap ,,f \begin{mdframed}<return>\end{mdframed}<esc>k$i
 inoremap ,,fc \begin{mdframed} \centering<return>\end{mdframed}<esc>k$F{a
 
 inoremap ,m \mintinline{cpp}{
-inoremap ,,m \begin{minted}{cpp}<return>\end{minted}<esc>O
+inoremap ,,m \begin{minted}[autogobble]{cpp}<return>\end{minted}<esc>O
 inoremap ,,mc \inputminted{cpp}{\docCodeDir/
 inoremap ,,mt \inputminted{text}{\docCodeDir/
 
