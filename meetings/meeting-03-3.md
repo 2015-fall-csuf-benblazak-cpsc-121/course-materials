@@ -1,4 +1,5 @@
 ## Administrative
+- Graded quizzes
 - Questions?
 
 ## Activity
