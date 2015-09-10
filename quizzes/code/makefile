@@ -34,7 +34,7 @@ cleanall: clean
 
 %.gen.section.all: %
 	../../scripts/gen-section.py '$<' '//'
-	for i in $*.gen.section.*; do make "$$i.gen.blank"; done
+	for i in $*.gen.section.*; do make "$${i/%.gen.blank/}.gen.blank"; done
 
 %.gen.blank: %
 	sed 's/.*/ /' '$<' > '$@'
