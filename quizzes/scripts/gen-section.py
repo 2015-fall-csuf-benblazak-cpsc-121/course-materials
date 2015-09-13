@@ -8,6 +8,8 @@ import os.path
 import re
 import sys
 
+# -----------------------------------------------------------------------------
+
 def gen_section(filepath, line_comment_begin):
     section_re = line_comment_begin + r'\s*SECTION'
     begin_re   = r'\s+BEGIN'
@@ -52,6 +54,7 @@ def gen_section(filepath, line_comment_begin):
         f.write(sections_lines[s])
         f.close()
 
+# -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:

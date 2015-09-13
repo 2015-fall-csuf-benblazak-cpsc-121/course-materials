@@ -1,10 +1,11 @@
 # Extra Credit
 
-- (?pts) demonstrate a working knowledge of the linux command line
+- (5 points) demonstrate a substantial working knowledge of the linux command
+  line
 
-- (?pts) demonstrate a working knowledge of vim
+- (5 points) demonstrate a substantial working knowledge of vim
 
-- (?pts) demonstrate a working knowledge of make
+- (5 points) demonstrate a substantial working knowledge of make
 
 -------------------------------------------------------------------------------
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)]
