@@ -10,6 +10,10 @@
   (http://programmers.stackexchange.com/a/58732)  
   Alan Kay on the definition of "object-oriented programming"
 
+- [The Deep Insights of Alan Kay]
+  (http://mythz.servicestack.net/blog/2013/02/27/the-deep-insights-of-alan-kay/)  
+  A very good collection of quotes and such.
+
 
 ## Technical Reference
 
@@ -45,6 +49,15 @@
 - [Reading files line by line in C++ using ifstream: dealing correctly with
   badbit, failbit, eofbit, and perror()]
   (https://gehrcke.de/2011/06/reading-files-in-c-using-ifstream-dealing-correctly-with-badbit-failbit-eofbit-and-perror/)
+
+- [Doing it wrong: getters and setters]
+  (http://typicalprogrammer.com/doing-it-wrong-getters-and-setters/)  
+  Getters and setters are very common (or at least very commonly known) so you
+  should understand them thoroughly.  And then, according to this blog, you
+  shouldn't use them.  And his position makes a lot of sense if you listen to
+  Alan Kay a bit, and really take in the idea that OOP is all about passing
+  message to objects, rather than about encapsulation or abstract data types or
+  anything else.
 
 
 ## Tutorials
