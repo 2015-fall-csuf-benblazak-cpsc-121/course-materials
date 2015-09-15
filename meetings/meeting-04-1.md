@@ -15,6 +15,7 @@
     - Printing an array
 
 - Function review
+    - Variable scope
     - Function overloading
     - Default arguments
     - Constant reference parameters
@@ -33,22 +34,19 @@
 
     - Class hierarchy design
     - `public` and `private`
+    - Constructors (and overloading constructors)
+    - Destructors
     - Accessors and mutators (getters and setters) (see [resources]
       (../resources.md#technical-notes))
-    - Constructors
-    - Overloading constructors
-    - Destructors
-    - Variable scope
     - Private member functions
-    - Multiple file projects
-    - Example: `Point` class
-
-    - Passing objects to functions
-    - Returning an object from a function
+    - Example: `Animal` class
 
     - Object composition (class member variables)
-
     - I/O for a class object
+
+    - Multiple file projects
+    - Passing objects to functions
+    - Returning an object from a function
 
 
 -------------------------------------------------------------------------------
