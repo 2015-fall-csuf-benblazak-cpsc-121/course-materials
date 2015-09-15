@@ -7,14 +7,15 @@ using std::string;
 
 // ----------------------------------------------------------------------------
 
-class Point {
+class Animal {
     private:
-        double x;
-        double y;
+        string name;
     public:
-        Point(double x, double y) { 
-            this->x = x;
-            this->y = y;
+        Animal(string name) { 
+            this->name = name;
+        }
+        void speak() {
+            cout << "Animal: I am a " << name << endl;
         }
 };
 
@@ -27,7 +28,8 @@ int main() {
 
     cout << "-------\n";
 
-    Point p = Point(1,2);
+    Animal a("normal animal");
+    a.speak();
 
     return 0;  // success
 }

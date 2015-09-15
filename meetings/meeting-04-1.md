@@ -21,18 +21,20 @@
 
 - OOP Introduction (chapter 7)
     - [Why objects?](http://mythz.servicestack.net/blog/2013/02/27/the-deep-insights-of-alan-kay/)
+    - Structures and unions
     - ADTs (Abstract Data Types)
-    - Classes, structures, unions
+    - Classes
     - [`string`] (http://www.cplusplus.com/reference/string/string/)
+    - Naming conventions
+    - Member functions (methods)
+        - Can be defined inline or outside the class
 
+    - **TODO** 
 
     - Class hierarchy design
     - `public` and `private`
     - Accessors and mutators (getters and setters) (see [resources]
       (../resources.md#technical-notes))
-    - Member functions (methods)
-        - Can be defined inline or outside the class
-    - Naming conventions
     - Constructors
     - Overloading constructors
     - Destructors
