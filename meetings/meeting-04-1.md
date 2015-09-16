@@ -20,34 +20,6 @@
     - Default arguments
     - Constant reference parameters
 
-- OOP Introduction (chapter 7)
-    - [Why objects?](http://mythz.servicestack.net/blog/2013/02/27/the-deep-insights-of-alan-kay/)
-    - Structures and unions
-    - ADTs (Abstract Data Types)
-    - Classes
-    - [`string`] (http://www.cplusplus.com/reference/string/string/)
-    - Naming conventions
-    - Member functions (methods)
-        - Can be defined inline or outside the class
-
-    - **TODO** 
-
-    - Class hierarchy design
-    - `public` and `private`
-    - Constructors (and overloading constructors)
-    - Destructors
-    - Accessors and mutators (getters and setters) (see [resources]
-      (../resources.md#technical-notes))
-    - Private member functions
-    - Example: `Animal` class
-
-    - Object composition (class member variables)
-    - I/O for a class object
-
-    - Multiple file projects
-    - Passing objects to functions
-    - Returning an object from a function
-
 
 -------------------------------------------------------------------------------
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)]
