@@ -1,6 +1,7 @@
 ## Administrative
 - Math salute!
-- Plan for next week.
+- Grade sheet
+- Plan for next week
 - Question: Quizzes little by little or save them up for the midterm?
 
 
