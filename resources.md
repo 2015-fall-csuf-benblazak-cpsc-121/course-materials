@@ -59,6 +59,24 @@
   message to objects, rather than about encapsulation or abstract data types or
   anything else.
 
+- [typedef struct vs struct definitions]
+  (http://stackoverflow.com/a/1675446)  
+  Identifier lookup is different for `struct`s in C and C++.
+
+- [Private and Protected Members : C++]
+  (http://stackoverflow.com/questions/224966/private-and-protected-members-c)
+
+- [Conversion from `int**` to `const int**`]
+  (http://stackoverflow.com/questions/16390294/conversion-from-int-to-const-int)  
+  From [one of the answers](http://stackoverflow.com/a/16390381):
+
+  > You can only add const qualification in a conversion between similiar
+  > pointer types if you add const at all levels from the first difference in
+  > cv qualification and up.
+  >
+  > So, you can convert `int**` to `int const* const*`, but not to `int const*
+  > *`.
+
 
 ## Tutorials
 
