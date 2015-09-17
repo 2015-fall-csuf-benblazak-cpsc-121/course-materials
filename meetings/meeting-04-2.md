@@ -3,6 +3,7 @@
 - Grade sheet
 - Plan for next week
 - Question: Quizzes little by little or save them up for the midterm?
+- Vote: Should homework due dates count, or only pull requests?
 
 
 ## Discussion
