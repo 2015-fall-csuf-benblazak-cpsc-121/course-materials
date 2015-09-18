@@ -60,6 +60,7 @@ or expanded during the course of the semester.
 - ADT
 - RAII
 - design patterns
+- information hiding
 
 
 -------------------------------------------------------------------------------
