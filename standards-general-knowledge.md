@@ -61,6 +61,22 @@ or expanded during the course of the semester.
 - RAII
 - design patterns
 - information hiding
+- encapsulation
+- composition vs inheritance
+- terms
+    - object
+    - class
+    - instance
+    - superclass
+    - subclass
+    - member
+    - method
+    - getters and setters
+    - accessors and mutators
+    - access modifiers
+        - public
+        - private
+        - protected
 
 
 -------------------------------------------------------------------------------

@@ -35,7 +35,7 @@
 
 - object-oriented programming (30%)
     - [general knowledge][]
-    - member functions
+    - classes
     - interfaces
     - inheritance
     - polymorphism
