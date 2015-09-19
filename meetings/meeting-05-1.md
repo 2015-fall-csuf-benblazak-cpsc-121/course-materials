@@ -5,8 +5,11 @@
 
 
 ## Discussion and Activity
+
+- [Do `class`s exist?](http://xkcd.com/659/)
+
 - Review of `class`s and other OOP material
-- Review for quizes on Thursday
+- Review for quizzes on Thursday
 - Talk about [assignment-03](../../../../assignment-03)
 
 
