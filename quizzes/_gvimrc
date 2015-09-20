@@ -20,8 +20,9 @@ inoremap ,t \text{
 inoremap ,u \textup{
 
 inoremap ,a \textAnswer{
-inoremap ,s \section*{
 inoremap ,q \textQuestion{
+inoremap ,s \section{
+inoremap ,ss \section*{
 
 inoremap ,,a \begin{align*}<return>\end{align*}<esc>O
 inoremap ,,c \begin{centering}<return>\end{centering}<esc>O

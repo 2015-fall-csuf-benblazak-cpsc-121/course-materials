@@ -1,12 +1,6 @@
 test-*
 
 quiz-*
-!quiz-01
-!quiz-02
-!quiz-03
-!quiz-04
-!quiz-05
-!quiz-06
-!quiz-07
-!quiz-08
+!quiz-[0][1-8]
+!quiz-[0][1-8].tex
 

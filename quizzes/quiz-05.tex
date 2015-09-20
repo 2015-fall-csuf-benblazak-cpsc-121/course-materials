@@ -1,0 +1,60 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{control flow}
+}
+
+\begin{itemize}
+
+  \item Given \mintinline{cpp}{int a;} with $0 \leq \mintinline{cpp}{a} \leq
+    7$, use one or more \mintinline{cpp}{if ... else} statements to accomplish
+    the following:
+    \begin{itemize}
+      \item if $0 \leq a \leq 3$ then output \mintinline{cpp}{"tiny"}
+      \item if $3 < a \leq 5$ then output \mintinline{cpp}{"small"}
+      \item if $5 < a \leq 7$ then output \mintinline{cpp}{"medium"}
+    \end{itemize}
+    \textAnswer{\showCodeLeft{if-else}{test}}
+    \vfill
+
+  \item Use a \mintinline{cpp}{switch} statement to accomplish the same thing
+    as above.
+    \textAnswer{\showCodeLeft{switch}{test}}
+    \vfill
+
+    \newpage
+
+  \item Use one or more \mintinline{cpp}{for} loops (in any configuration) to
+    obtain the following output:
+    \inputminted[label=Output]{text}{\docCodeDir/.for-nested.gen.output}
+    \textAnswer{\showCodeLeft{for-nested}{loop}}
+
+    \vfill
+
+  \item Translate the following \mintinline{cpp}{for} loop into a
+    \mintinline{cpp}{while} loop:
+    \showCodeLeft{for}{loop}
+    \textAnswer{\showCodeLeft{while}{loop}}
+    \vfill
+
+  \item Translate the \mintinline{cpp}{while} loop above into a
+    \mintinline{cpp}{do ... while} loop.  If this is not possible, explain why.
+    \textAnswer{\showCodeLeft{do-while}{loop}}
+    \vfill
+
+\end{itemize}
+
+\end{document}
+

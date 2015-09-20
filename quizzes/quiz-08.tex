@@ -1,0 +1,35 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{file I/O}
+}
+
+Given
+
+\inputminted[label={input.txt}]{text}{\docCodeDir/input.txt}
+
+write an entire program (including \mintinline{cpp}{#include} directives and
+\mintinline{cpp}{using std::...} statements) to generate
+
+\inputminted[label={output.gen.txt}]{text}{\docCodeDir/output.gen.txt}
+
+without hard coding the number of integers to read in.  Be sure to check that
+opening each file succeeded before reading from or writing to it, and
+\mintinline{cpp}{return 1;} from \mintinline{cpp}{main()} if it did not.
+
+\textAnswer{\inputminted{cpp}{\docCodeDir/file-io.cpp}}
+
+\end{document}
+

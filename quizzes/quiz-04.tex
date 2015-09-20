@@ -1,0 +1,40 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{operators}
+}
+
+\begin{itemize}
+
+  \item Evaluate the following program.
+    \evaluateCodeLeft{operators}{all}
+
+  \item Evaluate the statement piece by piece, indicating the order in which
+    each piece would be evaluated.  Also indicate whether any part of the
+    statement would produce a runtime error (e.g.~by dividing by
+    \mintinline{cpp}{0}).
+    \par\vspace{2ex}
+    \mintinline[fontsize=\Large]{cpp}{1 + 1 - 1 / 1 * + 1 - - - 1 && 1 == ! 1 || 1 + 1 >= 1 / 1 % 1}
+    \textAnswer{\par
+      \vspace{-1.9em}
+      \hspace{-1.2ex}
+      \includegraphics[width=6.37in]{\docImageDir/operators}
+    }
+    \vfill
+
+\end{itemize}
+
+\end{document}
+

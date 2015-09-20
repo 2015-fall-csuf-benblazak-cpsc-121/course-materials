@@ -77,6 +77,9 @@
   > So, you can convert `int**` to `int const* const*`, but not to `int const*
   > *`.
 
+- [Default class inheritance access]
+  (http://stackoverflow.com/a/3811441)
+
 
 ## Tutorials
 
