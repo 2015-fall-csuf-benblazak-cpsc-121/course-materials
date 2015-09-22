@@ -35,6 +35,14 @@
   (http://cdecl.org)  
   Helpful with understanding C style type declarations
 
+- [Sutter’s M / GotW]
+  (http://herbsutter.com/gotw/)  
+  Looks like a lot of good articles on C++ topics.
+
+- [EmbeddedGurus]
+  (http://embeddedgurus.com)  
+  Great articles on topics related to embedded programming.
+
 
 ## Technical Notes
 
@@ -79,6 +87,12 @@
 
 - [Default class inheritance access]
   (http://stackoverflow.com/a/3811441)
+
+- [What is the difference between new/delete and malloc/free?]
+  (http://stackoverflow.com/a/240308)
+
+- [What are Aggregates and PODs and how/why are they special?]
+  (http://stackoverflow.com/questions/4178175/what-are-aggregates-and-pods-and-how-why-are-they-special)
 
 
 ## Tutorials
