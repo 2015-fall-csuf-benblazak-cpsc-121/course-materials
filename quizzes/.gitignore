@@ -1,5 +1,3 @@
-test-*
-
 quiz-*
 !quiz-[0][1-8]
 !quiz-[0][1-8].tex

@@ -1,12 +1,15 @@
 ## Administrative
 - Math salute!
 - Questions?
+- Is anyone else ready to reassess (during lab)
+    - control flow
+    - arrays
+    - functions
+    - file I/O
 
 
-## Discussion and Activity
-- Review of `class`s and other OOP material
-- Review for quizes on Thursday
-- Talk about [assignment-03](../../../../assignment-03)
+## Quizzes
+- quiz-09
 
 
 -------------------------------------------------------------------------------

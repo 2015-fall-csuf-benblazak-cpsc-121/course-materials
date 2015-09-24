@@ -1,5 +1,5 @@
 ## Administrative
-- Questions?
+- Finish quizzes
 
 
 ## Activity
