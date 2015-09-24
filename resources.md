@@ -94,6 +94,16 @@
 - [What are Aggregates and PODs and how/why are they special?]
   (http://stackoverflow.com/questions/4178175/what-are-aggregates-and-pods-and-how-why-are-they-special)
 
+- [C++ Virtual/Pure Virtual Explained]
+  (http://stackoverflow.com/a/1307867)
+
+  > any method, not just virtual ones, can be overridden in subclasses. What
+  > virtual does is to give you polymorphism, that is, the ability to select at
+  > run-time the most-derived override of a method.
+
+- [Pure virtual functions may not have an inline definition. Why?]
+  (http://stackoverflow.com/a/4216116)
+
 
 ## Tutorials
 

@@ -4,3 +4,7 @@ quiz-*
 !quiz-[0][1-8]
 !quiz-[0][1-8].tex
 
+reassessment-*
+!reassessment-[0][0]
+!reassessment-[0][0].tex
+
