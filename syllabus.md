@@ -183,13 +183,13 @@ will be the grade divided by 4.
 
 ### Extra Credit
 
-For each programming error I make in code posted on the course [GitHub page][],
+For each programming errar I make in code posted on the course [GitHub page][],
 the first person to submit a pull request for a correct, well written, and well
 formated fix will receive 1 extra credit point.
 
 For each non-programming error I make in anything posed on the course [GitHub
 page][], the first person to submit a pull request for a correct, well written,
-and well formatted fix will receive 0.5 extra credit points.
+and well formatted fix will receive 2 extra credit points.
 
 Other opportunities for extra credit points may be offered throughout the
 course.  See [Extra Credit][].
