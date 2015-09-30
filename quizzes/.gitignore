@@ -1,6 +1,6 @@
 quiz-*
-!quiz-[0][1-8]
-!quiz-[0][1-8].tex
+!quiz-[0][1-9]
+!quiz-[0][1-9].tex
 
 reassessment-*
 !reassessment-[0][0]

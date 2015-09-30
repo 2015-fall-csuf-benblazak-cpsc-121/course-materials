@@ -1,0 +1,158 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+\def \hrulegray{{\color{lightgray}\hrule}}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{object-oriented programming :: general knowledge}
+}
+
+Give brief definitions of the following terms:
+\begin{itemize}
+    \hrulegray
+  \item object
+    \textAnswer{\\
+      A collection of data (what the object is made of) and methods (or member
+      functions) on that data (what the object can do, or what messages the
+      object understands) having a type (what the object is seen as).
+    }
+    \vfill\vfill\hrulegray
+  \item class
+    \textAnswer{\\
+      A description of (or a template (though not in the C++ and Java sense) for
+      creating) an object.
+    }
+    \vfill\hrulegray
+  \item instance
+    \textAnswer{\\
+      A specific object existing in memory.
+    }
+    \vfill\hrulegray
+  \item superclass
+    \textAnswer{\\
+      A class that is a parent of the class to which we are referring (i.e.~a
+      class from which we directly or indirectly inherit).
+    }
+    \vfill\hrulegray
+  \item subclass
+    \textAnswer{\\
+      A class that is a child of the class to which we are referring (i.e.~a
+      class that directly or indirectly inherits from us).
+    }
+    \vfill\hrulegray
+  \item member
+    \textAnswer{\\
+      A datum or method belonging to a class.
+    }
+    \vfill\hrulegray
+  \item method
+    \textAnswer{\\
+      Or member function.  An action that an object is able to perform, or a
+      message that an object is able to understand.
+    }
+    \vfill\hrulegray
+  \item getters and setters
+    \textAnswer{\\
+      Methods used for retrieving (getting) or modifying (setting) an object's
+      data members.
+    }
+    \vfill\hrulegray
+  \item accessors and mutators
+    \textAnswer{\\
+      The same as getters and setters.
+    }
+    \vfill\hrulegray
+  \item access modifiers
+    \begin{itemize}
+      \item public
+        \textAnswer{\\
+          Visible to everyone.
+        }
+        \vfill\hrulegray
+      \item private
+        \textAnswer{\\
+          Visible within the class, and to friends.
+        }
+        \vfill\hrulegray
+      \item protected
+        \textAnswer{\\
+          Visible within the class, to child classes, and to friends.
+        }
+        \vfill\hrulegray
+    \end{itemize}
+\end{itemize}
+
+\newpage
+
+\section{Question}
+\standards{
+  \standard{classes}
+  \standard{documentation}
+  \standard{consistency of style}
+}
+
+Preface your program with a block comment containing a short description of
+what it does, and with all necessary \mintinline{cpp}{#include} and
+\mintinline{cpp}{using} statements.
+
+Next, write an \mintinline{cpp}{Animal} class with the following members:
+\begin{itemize}
+  \item A \mintinline{cpp}{name}, as a string, with either
+    \mintinline{cpp}{private} or \mintinline{cpp}{protected} visibility.
+  \item A default constructor that optionally accepts a constant reference to a
+    \mintinline{cpp}{string} and initializes the \mintinline{cpp}{name} data
+    member to that value.
+\end{itemize}
+
+Next, write a \mintinline{cpp}{Dolphin} class that inherits from
+\mintinline{cpp}{Animal} and has the following members:
+\begin{itemize}
+  \item A default constructor that optionally accepts a constant reference to a
+    \mintinline{cpp}{string} and passes that value to the parent constructor.
+  \item A \mintinline{cpp}{void} function named \mintinline{cpp}{squeak} that
+    sends \mintinline{cpp}{"My name is "}, followed by the
+    \mintinline{cpp}{Dolphin}'s name, followed by
+    \mintinline{cpp}{".  Squeak!\n"}, to standard output.
+\end{itemize}
+
+Next, write a short \mintinline{cpp}{main()} that does the following:
+\begin{itemize}
+  \item Declares an array of 3 \mintinline{cpp}{Dolphin}s, giving each one a
+    unique name.
+  \item Calls the \mintinline{cpp}{squeak} method on (sends the
+    \mintinline{cpp}{squeak} message to) each one.
+\end{itemize}
+
+Finally, in a comment next to each line that produces output, indicate what
+that output will be.
+
+Before you begin, please
+\begin{itemize}
+  \item Be sure to write your answers neatly and in a good and consistent
+    style.  This will be graded.  I recommend writing out your solution on the
+    back of the test or on scratch paper and then copying it to page 3 (make
+    sure to cross out the version you don't want graded).  You might also
+    consider using pencil, if pen is your usual choice.
+  \item Try to comment with the level of detail you would find helpful (but not
+    irritating) in code of similar complexity written by another student in
+    this class.
+\end{itemize}
+
+\newpage
+
+\textQuestion{~}
+\textAnswer{\inputminted{cpp}{\docCodeDir/animal-dolphin-main.cpp}}
+
+\end{document}
+
