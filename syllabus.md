@@ -7,8 +7,7 @@ Ben Blazak <bblazak@fullerton.edu>
 
 ## Calendar
 
-[XML] (https://www.google.com/calendar/feeds/os02kggflfvf2oqrdceu18js9o%40group.calendar.google.com/public/basic)
-| [ICAL] (https://www.google.com/calendar/ical/os02kggflfvf2oqrdceu18js9o%40group.calendar.google.com/public/basic.ics)
+[ICAL] (https://www.google.com/calendar/ical/os02kggflfvf2oqrdceu18js9o%40group.calendar.google.com/public/basic.ics)
 | [HTML] (https://www.google.com/calendar/embed?src=os02kggflfvf2oqrdceu18js9o%40group.calendar.google.com&ctz=America/Los_Angeles)
 
 ### Meeting Times
