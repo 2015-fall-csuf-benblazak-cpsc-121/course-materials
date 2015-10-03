@@ -113,6 +113,10 @@
 - [GitHub Help / Collaborating / Using pull requests]
   (https://help.github.com/articles/using-pull-requests)
 
+- [cplusplus.com tutorials]
+  (http://www.cplusplus.com/doc/tutorial/)  
+  Lots of good tutorials, covering many topics.
+
 
 ## Administrative
 
