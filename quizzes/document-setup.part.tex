@@ -65,9 +65,13 @@
 \usepackage{tikz}
 \usepackage[explicit]{titlesec}
 
+\usepackage{microtype}
+%
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+%
+\usepackage{upquote}
 
 \usepackage{xcolor}
 
@@ -104,6 +108,8 @@
 }
 
 % source code -----------------------------------------------------------------
+
+\DisableLigatures[]{family=tt*}  % from `microtype` package
 
 \usemintedstyle{solarizedlight}
 \setminted{frame=single}
@@ -237,6 +243,37 @@
   #1 & ~~~ \\\hline
 }
 
+% .............................................................................
+
+\def \showCodeTop #1#2{
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
+  \par
+  \inputminted{cpp}{\codeFile}
+  \vspace{0.5\parskip}
+  \inputminted[label=Output]{text}{\outputFile}
+  \par
+}
+
+\def \showCodeLeft #1#2{
+  \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
+  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
+               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
+  \par
+  \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
+    \inputminted{cpp}{\codeFile}
+  \end{minipage}
+  \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
+    \inputminted[label=Output]{text}{\outputFile}
+  \end{minipage}
+  \par
+}
+
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
 \def \evaluateCodeTop #1#2{
   \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
   \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
@@ -254,6 +291,7 @@
   }
   \par
 }
+
 \def \evaluateCodeLeft #1#2{
   \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
   \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
@@ -274,28 +312,46 @@
   \par
 }
 
-\def \showCodeTop #1#2{
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+\def \correctCodeTop #1#2{
   \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
+  \def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}
   \par
-  \inputminted{cpp}{\codeFile}
-  \vspace{0.5\parskip}
-  \inputminted[label=Output]{text}{\outputFile}
+  \inputminted[label={\normalsize{}Incorrect Code},fontsize=\Large]{cpp}{\codeFile--bad}
+  \par
+  \textQuestion{
+    \IfFileExists{\outputFile--good}
+      {\inputminted[label={Intended Output}]{text}{\outputFile--good}}
+      {}
+  }
+  \textQuestion{
+    \IfFileExists{\outputFile--bad}
+      {\inputminted[label={Actual Output}]{text}{\outputFile--bad}}
+      {}
+  }
+  \textAnswer{\inputminted[label={Corrections}]{diff}{\codeFile--diff}}
   \par
 }
-\def \showCodeLeft #1#2{
+
+\def \correctCodeLeft #1#2{
   \def\codeFile{\docCodeDir/.#1.cpp.gen.section.#2}
-  \IfFileExists{\docCodeDir/.#1.gen.output.gen.section.#2}
-               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}}
-               {\def\outputFile{\docCodeDir/.#1.gen.output.gen.section.all}}
+  \def\outputFile{\docCodeDir/.#1.gen.output.gen.section.#2}
   \par
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
-    \inputminted{cpp}{\codeFile}
+    \inputminted[label={Incorrect Code}]{cpp}{\codeFile--bad}
   \end{minipage}
   \begin{minipage}[t]{0.5\linewidth} \vspace{0ex}
-    \inputminted[label=Output]{text}{\outputFile}
+    \textQuestion{
+      \IfFileExists{\outputFile--good}
+        {\inputminted[label={Intended Output}]{text}{\outputFile--good}}
+        {}
+      \par
+      \IfFileExists{\outputFile--bad}
+        {\inputminted[label={Actual Output}]{text}{\outputFile--bad}}
+        {}
+    }
+    \textAnswer{\inputminted[label={Corrections}]{diff}{\codeFile--diff}}
   \end{minipage}
   \par
 }

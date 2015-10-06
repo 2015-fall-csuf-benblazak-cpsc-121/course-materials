@@ -4,6 +4,7 @@
 # -----------------------------------------------------------------------------
 
 CPP := $(wildcard *.cpp)
+CPP := $(filter-out %.part.cpp,$(CPP))
 
 OUTPUT := $(CPP:%.cpp=.%.gen.output)
 BLANK := $(CPP:%=.%.gen.blank) $(OUTPUT:%=%.gen.blank)
@@ -34,7 +35,11 @@ cleanall: clean
 
 %.gen.section.all: %
 	../../scripts/gen-section.py '$<' '//'
+	-for i in $*.gen.section.*--bad; do make "$${i/%--bad/--diff}"; done
 	for i in $*.gen.section.*; do make "$${i/%.gen.blank/}.gen.blank"; done
+
+%--diff: %--bad %--good
+	diff -u $^ | tail -n +3 > '$@'
 
 %.gen.blank: %
 	sed 's/.*/ /' '$<' > '$@'
