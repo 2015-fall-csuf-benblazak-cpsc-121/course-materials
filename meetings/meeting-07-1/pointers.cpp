@@ -7,7 +7,6 @@
  *   then converted back to pointer to void, and the result will compare equal
  *   to the original pointer" [(note)](http://stackoverflow.com/a/1846648).
  *
- *
  * References:
  *
  * - An awesome wiki on arrays, often mentioning their relationship to
@@ -542,7 +541,7 @@ int main() {
 //     test_address_of();
 //     test_address_of_array();
 //     test_indirection();
-//     test_indirection_array();
+    test_indirection_array();
 //     test_arithmetic();
 //     test_function_pointers();
 //     test_other();

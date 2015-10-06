@@ -1,22 +1,16 @@
 ## Administrative
-- Math salute!
-- Schedule
-    - Pointers
-    - Midterm
-    - Review Session?
-    - More OOP (chapter 11)
-    - Assignment 4
-    - Searching, Sorting, and Algorithm Analysis is postponed; may be combined
-      with Recursion and Advanced OOP, otherwise we'll go over it briefly, and
-      the quiz(zes) for that standard will be simple
-- Grade table
+- Questions?
 
 
-## Discussion
+## Discussion (if not completed during lecture)
 chapter 10 -- pointers
 
-- Overview of pointers
-- Start [demo](meeting-07-1/pointers.cpp)
+- Finish [demo](meeting-07-1/pointers.cpp)
+- Conceptual overview of linked lists
+
+
+## Activity
+- Start [assignment-04](../../../../assignment-04)
 
 
 -------------------------------------------------------------------------------
