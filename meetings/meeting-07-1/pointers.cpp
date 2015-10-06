@@ -7,6 +7,9 @@
  *   then converted back to pointer to void, and the result will compare equal
  *   to the original pointer" [(note)](http://stackoverflow.com/a/1846648).
  *
+ *
+ * References:
+ *
  * - An awesome wiki on arrays, often mentioning their relationship to
  *   pointers:
  *   <http://stackoverflow.com/questions/4810664/how-do-i-use-arrays-in-c>
@@ -17,7 +20,8 @@
  *     - Why does C++ have both pointers and references?
  *       <http://www.stroustrup.com/bs_faq2.html#pointers-and-references>
  *
- * - A great resource for playing with type declarations: <http://cdecl.org>
+ * - A great resource for playing with type declarations:
+ *   <http://cdecl.org>
  *
  * - The C++ Super FAQ on `const int * p` vs `int * const p`:
  *   <https://isocpp.org/wiki/faq/const-correctness#const-ptr-vs-ptr-const>
