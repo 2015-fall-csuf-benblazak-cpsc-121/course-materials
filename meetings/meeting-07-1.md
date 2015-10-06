@@ -1,6 +1,14 @@
 ## Administrative
 - Math salute!
 - Schedule
+    - Pointers
+    - Midterm
+    - Review Session?
+    - More OOP (chapter 11)
+    - Assignment 4
+    - Searching, Sorting, and Algorithm Analysis is postponed; may be combined
+      with Recursion and Advanced OOP, otherwise we'll go over it briefly, and
+      the quiz(zes) for that standard will be simple
 - Grade table
 
 
