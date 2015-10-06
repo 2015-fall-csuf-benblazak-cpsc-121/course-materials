@@ -54,6 +54,10 @@
   (http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c)  
   Short answer: no; but you should (*always*) try to understand why
 
+- [How do I use arrays in C++?]
+  (http://stackoverflow.com/questions/4810664/how-do-i-use-arrays-in-c)  
+  A bunch of *really* interesting stuff about arrays in C++
+
 - [Reading files line by line in C++ using ifstream: dealing correctly with
   badbit, failbit, eofbit, and perror()]
   (https://gehrcke.de/2011/06/reading-files-in-c-using-ifstream-dealing-correctly-with-badbit-failbit-eofbit-and-perror/)
