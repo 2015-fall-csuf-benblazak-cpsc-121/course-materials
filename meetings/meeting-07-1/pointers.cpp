@@ -541,7 +541,7 @@ int main() {
 //     test_address_of();
 //     test_address_of_array();
 //     test_indirection();
-    test_indirection_array();
+//     test_indirection_array();
 //     test_arithmetic();
 //     test_function_pointers();
 //     test_other();
