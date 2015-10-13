@@ -30,7 +30,17 @@ cleanall: clean
 	-latexmk --shell-escape -lualatex -pdf -C *.tex
 	-rm -r .*.gen.* *.gen.*
 
-# -----------------------------------------------------------------------------
+# .............................................................................
+.PHONY: shuffle clean-shuffle
+
+shuffle:
+	-for i in *.gen.questions.pdf; do make "$${i/%.questions.pdf/.shuffle.pdf}"; done
+
+clean-shuffle:
+	-rm blank.gen.pdf *.gen.shuffle.pdf
+
+
+# .............................................................................
 .PHONY: view-standards
 
 list-standards:
@@ -56,7 +66,18 @@ list-standards:
 	  echo; \
 	) > '$@'
 
-# -----------------------------------------------------------------------------
+# .............................................................................
+
+blank.gen.pdf:
+	echo "" | ps2pdf -sPAPERSIZE=letter - '$@'
+
+%.gen.shuffle.pdf: blank.gen.pdf %.gen.questions.pdf %.gen.answers.pdf
+	pdftk B='blank.gen.pdf' \
+	      Q='$*.gen.questions.pdf' \
+	      A='$*.gen.answers.pdf' \
+	      shuffle B A Q output '$@'
+
+# .............................................................................
 
 %.pdf: %.tex document-setup.part.tex ./scripts/functions.lua
 	i="`lua -e 'require("./scripts/functions"); print(jobname_root("$@"))'`"; \

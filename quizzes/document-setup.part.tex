@@ -221,6 +221,36 @@
 \long\def \textAnswer #1{\answer{{\color{red!50!black}#1}}}
 \long\def \textQuestion #1{\question{{\color{.}#1}}}
 
+% .............................................................................
+
+\def \newEvenPage{
+  \newpage
+  \ifthenelse{\isodd{\thepage{}}}{~\newpage}{}
+}
+\def \newOddPage{
+  \newpage
+  \ifthenelse{\isodd{\thepage{}}}{}{~\newpage}
+}
+
+\def \makeDashedLine{
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[shift={(current page.west |- 0,0)}, lightgray, very thin, dashed]
+    (1in,-0.5\baselineskip) -- (7.5in,-0.5\baselineskip);
+  \end{tikzpicture}
+}
+
+% <https://en.wikipedia.org/wiki/Ruled_paper>
+% - college ruled paper has a line spacing of 9/32in (7.1mm); this gives the
+%   students 32 rows and 30 columns
+\def \makePageQuadrilleRuled{
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[shift=(current page.center), step=7.1mm, lightgray, very thin, dashed]
+    (current page.north west) grid (current page.south east);
+  \end{tikzpicture}
+}
+
+% .............................................................................
+
 \long\def \standardsSection #1{{
   \section*{Standards}
   \def\arraystretch{2}

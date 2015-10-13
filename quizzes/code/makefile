@@ -12,6 +12,9 @@ BLANK := $(CPP:%=.%.gen.blank) $(OUTPUT:%=%.gen.blank)
 # possibly incomplete list of section files
 SECTION := $(CPP:%=.%.gen.section.all) $(OUTPUT:%=%.gen.section.all)
 
+CXX := clang++
+CXXFLAGS := -std=c++14
+
 # -----------------------------------------------------------------------------
 .PHONY: all clean cleanall
 
@@ -28,7 +31,7 @@ cleanall: clean
 	cp '$<' '$@'
 
 %.gen.exe: %.cpp
-	clang++ -o '$@' '$<'
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) '$^' -o '$@'
 
 %.gen.output: %.gen.exe
 	./'$<' > '$@'
