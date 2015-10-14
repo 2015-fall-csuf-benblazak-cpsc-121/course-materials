@@ -108,6 +108,9 @@
 - [Pure virtual functions may not have an inline definition. Why?]
   (http://stackoverflow.com/a/4216116)
 
+- [Lvalues and Rvalues (Visual C++)]
+  (https://msdn.microsoft.com/en-us/library/f90831hc.aspx)
+
 
 ## Tutorials
 
