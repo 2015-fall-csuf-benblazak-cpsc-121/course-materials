@@ -31,7 +31,8 @@ int main() {
         r = 7;
         // no `&` is necessary here
 
-        cout << i << " " << *p << " " << r << endl;  // output: 7 7 7
+        cout << i << " " << *p << " " << r << endl;
+        // output: 7 7 7
     }
     {
         // just for fun, here's an example with a little more symmetry

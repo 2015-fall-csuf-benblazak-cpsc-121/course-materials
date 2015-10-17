@@ -111,6 +111,23 @@
 - [Lvalues and Rvalues (Visual C++)]
   (https://msdn.microsoft.com/en-us/library/f90831hc.aspx)
 
+- [C++ Rvalue References Explained]
+  (http://thbecker.net/articles/rvalue_references/section_01.html)  
+  Long, but good (as far as I got).
+
+- [Wikipedia / C++11]
+  (https://en.wikipedia.org/wiki/C%2B%2B11)  
+  Lots of interesting things were added in C++11, and it's good to read a bit
+  about them now and again :)
+
+- [GotW #1 Solution: Variable Initialization – or Is It?]
+  (http://herbsutter.com/2013/05/09/gotw-1-solution/)
+
+- [better design than circular dependency for convertible types]
+  (http://stackoverflow.com/questions/8749566/better-design-than-circular-dependency-for-convertible-types)  
+  Interesting discussion on ways to have two (or a group of) classes that are
+  able to convert to each other.
+
 
 ## Tutorials
 
