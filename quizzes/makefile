@@ -44,7 +44,9 @@ clean-shuffle:
 .PHONY: view-standards
 
 list-standards:
-	@grep --color -r ' \\standard{' *
+	@find . -name 'quiz-*.tex' -not -name 'quiz-10.tex' \
+	    -or -name 'reassessment-*.tex' -not -name 'reassessment-*.*.tex' \
+	| xargs grep --color -r '^  \\standard{'
 
 # -----------------------------------------------------------------------------
 .SECONDARY: $(TEX) $(TEX:%.tex=%.pdf)
