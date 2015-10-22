@@ -31,6 +31,19 @@ cleanall: clean
 	-rm -r .*.gen.* *.gen.*
 
 # .............................................................................
+.PHONY: all-% clean-%
+
+all-%:
+	for i in $(filter $*%,$(PDF)); do make $$i; done
+
+clean-%:
+	for i in `find ./code/$* -type d`; do \
+		( cd $$i; make cleanall; ); \
+	done; \
+	#
+	-rm -r $**.gen.* .$**.gen.* .*.$**.gen.*
+
+# .............................................................................
 .PHONY: shuffle clean-shuffle
 
 shuffle:
