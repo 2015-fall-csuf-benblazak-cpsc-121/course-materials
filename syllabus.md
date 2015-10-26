@@ -50,7 +50,7 @@ course [standards][], whether we covered it in class or not.
                           OOP Introduction | 7       | 2
                                   Pointers | 10      | 1
 Searching, Sorting, and Algorithm Analysis | 9       | 1.5
-                        *Test 1* (Midterm) |         | 0.5
+                        *Test 1 (Midterm)* |         | 0.5
                                   More OOP | 11      | 2
                                  Recursion | 14      | 1
                               Advanced OOP | 15      | 2
