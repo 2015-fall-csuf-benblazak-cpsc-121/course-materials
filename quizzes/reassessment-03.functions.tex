@@ -1,0 +1,56 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+\def \codeFilePrefix{\docCodeDir/.functions.cpp.gen.section}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{functions}
+}
+
+Assuming that all necessary headers have been included and all required symbols
+are in the standard namespace, do the following:
+
+\begin{itemize}
+
+  \item Write the prototype and definition for a function named
+    \mintinline{cpp}{max} that accepts two \mintinline{cpp}{float}s and returns
+    the largest as a \mintinline{cpp}{float}.
+    \textAnswer{\inputminted{cpp}{\codeFilePrefix.max}}
+    \vfill
+
+  \item Write the prototype and definition for a function named
+    \mintinline{cpp}{change} that accepts two \mintinline{cpp}{int}s, both
+    passed by reference, sets the value of each to twice its original value,
+    and returns \mintinline{cpp}{void}.
+    \textAnswer{\inputminted{cpp}{\codeFilePrefix.set}}
+    \vfill
+
+  \item Write a short \mintinline{cpp}{main()} and indicate its output.  Your
+    \mintinline{cpp}{main()} must begin with
+    \mintinline{cpp}{int a = 2, b = 1;} and accomplish the following:
+    \begin{itemize}
+      \item Output the value of \mintinline{cpp}{max} called with the arguments
+        \mintinline{cpp}{a} and \mintinline{cpp}{b}, followed by a newline.
+      \item Call \mintinline{cpp}{change} with the arguments
+        \mintinline{cpp}{a}  and \mintinline{cpp}{b}.
+      \item Output the values of \mintinline{cpp}{a} and \mintinline{cpp}{b},
+        separated by whitespace.
+    \end{itemize}
+    \textAnswer{\showCodeLeft{functions}{main}}
+    \vfill
+
+\end{itemize}
+
+\end{document}
+

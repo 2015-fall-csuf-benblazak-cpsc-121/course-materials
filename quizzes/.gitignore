@@ -6,5 +6,6 @@ quiz-*
 
 reassessment-*
 !reassessment-[0][1-7]
-!reassessment-[0][1-7].tex
+!reassessment-[0][1-7].*
+!reassessment-[0][1-7].*.tex
 

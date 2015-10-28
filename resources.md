@@ -128,6 +128,10 @@
   Interesting discussion on ways to have two (or a group of) classes that are
   able to convert to each other.
 
+- [Why don't STL containers have virtual destructors?]
+  (http://stackoverflow.com/questions/1647298/why-dont-stl-containers-have-virtual-destructors)  
+  Good (though perhaps not conclusive) discussion.
+
 
 ## Tutorials
 

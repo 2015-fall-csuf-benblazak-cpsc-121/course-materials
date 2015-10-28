@@ -16,11 +16,21 @@
 
 % -----------------------------------------------------------------------------
 
-\def \docTitle  {\directlua{tex.print(doc_title('\jobname'))}}
-\def \docAuthor {\question{Name:\hfill{}CWID:\hfill}\answer{Answer Key}}
-\def \docClass  {CPSC 121-11}
-\def \docSchool {~}
-\def \docTerm   {CSUF Fall 2015}
+\ifx\docTitle\undefined
+  \def \docTitle  {\directlua{tex.print(doc_title('\jobname'))}}
+\fi
+\ifx\docAuthor\undefined
+  \def \docAuthor {\question{Name:\hfill{}CWID:\hfill}\answer{Answer Key}}
+\fi
+\ifx\docClass\undefined
+  \def \docClass  {CPSC 121-11}
+\fi
+\ifx\docSchool\undefined
+  \def \docSchool {~}
+\fi
+\ifx\docTerm\undefined
+  \def \docTerm   {CSUF Fall 2015}
+\fi
 
 \def \docCopyright {
   \begin{figure}[b!]
