@@ -10,25 +10,31 @@ or expanded during the course of the semester.
     - Dennis Ritchie
     - Bjarne Stroustrup
     - Alan Kay
-- languages
-    - simula
-    - smalltalk
-    - c++
-    - java
-    - python
-    - ruby
-    - obj-c
-    - c#
 - places
     - MIT AI Lab
     - Xerox PARK
     - AT&T Bell Labs
-- safety
-    - RSI
-    - ergonomics
+- languages
+    - of historical importance
+        - simula
+        - smalltalk
+    - more current
+        - java
+        - python
+        - ruby
+        - obj-c
+        - c#
+    - language paradigms
+        - procedural
+        - object oriented
+        - logical
+        - functional
 - general c++
     - why are there both pointers and references?
     - why is `this` a pointer instead of a reference?
+- safety
+    - RSI
+    - ergonomics
 
 ## Review
 - c++ compilation process
