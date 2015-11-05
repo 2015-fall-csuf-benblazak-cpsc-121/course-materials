@@ -132,6 +132,9 @@
   (http://stackoverflow.com/questions/1647298/why-dont-stl-containers-have-virtual-destructors)  
   Good (though perhaps not conclusive) discussion.
 
+- [Why can’t I separate the definition of my templates class from its declaration and put it inside a .cpp file?]
+  (https://isocpp.org/wiki/faq/templates#templates-defn-vs-decl)
+
 
 ## Tutorials
 
