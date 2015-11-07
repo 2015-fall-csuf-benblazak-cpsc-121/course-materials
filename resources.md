@@ -135,6 +135,12 @@
 - [Why can’t I separate the definition of my templates class from its declaration and put it inside a .cpp file?]
   (https://isocpp.org/wiki/faq/templates#templates-defn-vs-decl)
 
+- [What is the difference between a template class and a class template?]
+  (http://stackoverflow.com/a/879793)
+
+  > [...] there is no such thing as a "template class," there is only a "class
+  > template."
+
 
 ## Tutorials
 
