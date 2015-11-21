@@ -12,13 +12,19 @@ import sys
 
 def gen_section(filepath, line_comment_begin):
     section_re = line_comment_begin + r'\s*SECTION'
+    ignore_re  = r'\s+IGNORE'
     begin_re   = r'\s+BEGIN'
     end_re     = r'\s+END'
+    pause_re   = r'\s+PAUSE'
+    resume_re  = r'\s+RESUME'
     name_re    = r'\s+([\w-]+)'
 
     section = re.compile( section_re )
+    ignore  = re.compile( section_re + ignore_re )
     begin   = re.compile( section_re + begin_re + name_re )
     end     = re.compile( section_re + end_re + name_re )
+    pause   = re.compile( section_re + pause_re + name_re )
+    resume  = re.compile( section_re + resume_re + name_re )
 
     sections_lines  = { 'all':'' }  # the lines of text, for every section
     sections_open   = { 'all' }     # sections currently being processed
@@ -29,7 +35,9 @@ def gen_section(filepath, line_comment_begin):
     line_number = 0;
     for line in f:
         line_number += 1
-        if begin.search(line):
+        if ignore.search(line):
+            pass
+        elif begin.search(line):
             name = begin.search(line).group(1)
             sections_lines[name] = ''
             sections_open.add(name)
@@ -38,6 +46,13 @@ def gen_section(filepath, line_comment_begin):
             name = end.search(line).group(1)
             if name in sections_open:
                 sections_open.remove(name)
+        elif pause.search(line):
+            name = pause.search(line).group(1)
+            if name in sections_open:
+                sections_open.remove(name)
+        elif resume.search(line):
+            name = resume.search(line).group(1)
+            sections_open.add(name)
         else:
             if section.search(line):
                 raise Exception( 'Illegal SECTION in input file '
