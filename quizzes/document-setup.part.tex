@@ -70,18 +70,12 @@
 \usepackage{etoolbox}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage[cachedir={.minted-\jobname}]{minted}
+\usepackage[cachedir={.gen.minted.\directlua{tex.print(jobname_root('\jobname'))}}]{minted}
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage[explicit]{titlesec}
 
-\usepackage{microtype}
-%
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-%
-\usepackage{upquote}
+\usepackage{fontspec}
 
 \usepackage{xcolor}
 
@@ -118,8 +112,6 @@
 }
 
 % source code -----------------------------------------------------------------
-
-\DisableLigatures[]{family=tt*}  % from `microtype` package
 
 \usemintedstyle{solarizedlight}
 \setminted{frame=single}
