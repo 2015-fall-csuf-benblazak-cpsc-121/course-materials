@@ -10,6 +10,11 @@ import sys
 
 # -----------------------------------------------------------------------------
 
+def raise__illegal_section(filepath, line_number):
+    raise Exception( 'Illegal SECTION in input file '
+                     + '"' + filepath + '", '
+                     + 'line ' + str(line_number) )
+
 def gen_section(filepath, line_comment_begin):
     section_re = line_comment_begin + r'\s*SECTION'
     ignore_re  = r'\s+IGNORE'
@@ -17,6 +22,7 @@ def gen_section(filepath, line_comment_begin):
     end_re     = r'\s+END'
     pause_re   = r'\s+PAUSE'
     resume_re  = r'\s+RESUME'
+    indent_re  = r'\s+INDENT'
     name_re    = r'\s+([\w-]+)'
 
     section = re.compile( section_re )
@@ -25,6 +31,7 @@ def gen_section(filepath, line_comment_begin):
     end     = re.compile( section_re + end_re + name_re )
     pause   = re.compile( section_re + pause_re + name_re )
     resume  = re.compile( section_re + resume_re + name_re )
+    indent  = re.compile( section_re + indent_re + name_re )
 
     sections_lines  = { 'all':'' }  # the lines of text, for every section
     sections_open   = { 'all' }     # sections currently being processed
@@ -46,18 +53,23 @@ def gen_section(filepath, line_comment_begin):
             name = end.search(line).group(1)
             if name in sections_open:
                 sections_open.remove(name)
+            else:
+                raise__illegal_section(filepath, line_number)
         elif pause.search(line):
             name = pause.search(line).group(1)
             if name in sections_open:
                 sections_open.remove(name)
+            else:
+                raise__illegal_section(filepath, line_number)
         elif resume.search(line):
             name = resume.search(line).group(1)
             sections_open.add(name)
+        elif indent.search(line):
+            name = indent.search(line).group(1)
+            sections_indent[name] = re.search( r'\S', line ).start()
         else:
             if section.search(line):
-                raise Exception( 'Illegal SECTION in input file '
-                                 + '"' + filepath + '", '
-                                 + 'line ' + str(line_number) )
+                raise__illegal_section(filepath, line_number)
             for name in sections_open:
                 sections_lines[name] += line[sections_indent[name]:] or '\n'
 
