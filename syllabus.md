@@ -73,7 +73,7 @@ Topics        | The object-oriented programming paradigm: classes, member functi
 ### Objectives
 
 To reinforce the material covered in CPSC 120, introduce Object Oriented
-Programing, and prepare students for the material covered in CPSC 131.
+Programming, and prepare students for the material covered in CPSC 131.
 
 ### Learning Goals
 
