@@ -96,8 +96,10 @@ blank.gen.pdf:
 
 %.pdf: %.tex document-setup.part.tex ./scripts/functions.lua
 	i="`lua -e 'require("./scripts/functions"); print(jobname_root("$@"))'`"; \
-	if [ -d "./code/$$i/" ]; then (cd "./code/$$i/"; make;); fi; \
+	if [ -d "./code/$$i/" ]; then (cd "./code/$$i/"; make;); fi;
 	#
+	ulimit -S -n 512; \
 	latexmk --shell-escape -lualatex -pdf '$<'
+	#
 	touch '$@'  # for when latexmk does nothing
 

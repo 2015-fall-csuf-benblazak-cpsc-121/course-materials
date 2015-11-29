@@ -1,5 +1,8 @@
 ## Administrative
 - Math salute!
+- Tests 14 and 15 covering the remaining unassessed standards on Thursday and
+  next Tuesday
+- Cutoff for reassessments (so I can post them for studying)?
 
 
 ## Discussion and Activity
