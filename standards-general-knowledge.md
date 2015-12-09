@@ -12,7 +12,7 @@ or expanded during the course of the semester.
     - Alan Kay
 - places
     - MIT AI Lab
-    - Xerox PARK
+    - Xerox PARC
     - AT&T Bell Labs
 - languages
     - of historical importance
