@@ -82,7 +82,7 @@
   (http://stackoverflow.com/questions/16390294/conversion-from-int-to-const-int)  
   From [one of the answers](http://stackoverflow.com/a/16390381):
 
-  > You can only add const qualification in a conversion between similiar
+  > You can only add const qualification in a conversion between similar
   > pointer types if you add const at all levels from the first difference in
   > cv qualification and up.
   >
