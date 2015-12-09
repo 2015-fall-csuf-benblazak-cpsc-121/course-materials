@@ -142,7 +142,7 @@ receive a grade for each as follows:
 4    | you have mastered the skill
 
 Most standards will be assessed several times.  I will look at the trend of
-these assessments and use my judgement to assign you an overall grade.  For
+these assessments and use my judgment to assign you an overall grade.  For
 instance, given the assessments for some standard below, I might assign overall
 grades as follows [\[2\]](#footnotes):
 
