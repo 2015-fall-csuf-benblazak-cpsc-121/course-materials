@@ -1,0 +1,56 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\section{Question}
+\standards{
+  \standard{functions}
+}
+
+Assuming that all necessary headers have been included and all required symbols
+are in the standard namespace, do the following:
+
+\begin{itemize}
+
+  \item Write the prototype and definition for a function named
+    \mintinline{cpp}{min} that accepts two \mintinline{cpp}{int}s and returns
+    the smallest as an \mintinline{cpp}{int}.
+    \textAnswer{\inputminted{cpp}{\docCodeDir/.functions.cpp.gen.section.a}}
+    \vfill
+
+  \item Write the prototype and definition for a function named
+    \mintinline{cpp}{squares} that accepts two \mintinline{cpp}{int}s, both
+    passed by reference, sets the value of each to the square of its original
+    value, and uses the \mintinline{cpp}{min} function defined above to return
+    the smaller of the two.
+    \textAnswer{\inputminted{cpp}{\docCodeDir/.functions.cpp.gen.section.b}}
+    \vfill
+
+  \item Write a short \mintinline{cpp}{main()} and \textbf{indicate its
+    output}.  Your \mintinline{cpp}{main()} must begin with
+    \mintinline{cpp}{int a = 2, b = -5;} and accomplish the following:
+    \begin{itemize}
+      \item Output the value of \mintinline{cpp}{min} called with the arguments
+        \mintinline{cpp}{a} and \mintinline{cpp}{b}, followed by a newline.
+      \item Output the value of \mintinline{cpp}{squares} called with the
+        arguments \mintinline{cpp}{a} and \mintinline{cpp}{b}, followed by a
+        newline.
+      \item Output the values of \mintinline{cpp}{a} and \mintinline{cpp}{b},
+        separated by whitespace.
+    \end{itemize}
+    \textAnswer{\showCodeLeft{functions}{main}}
+    \vfill
+
+\end{itemize}
+
+\end{document}
+

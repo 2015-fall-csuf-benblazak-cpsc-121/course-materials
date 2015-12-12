@@ -1,0 +1,107 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\standardsSection{
+  \standard{classes}
+}
+
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{classes}
+}
+
+Before you begin, please
+\begin{itemize}
+  \item Remember to preface your program with a block comment containing a
+    short description of what it does.
+  \item Be sure to write all necessary (and no unnecessary)
+    \mintinline{cpp}{#include} directives and \mintinline{cpp}{using}
+    statements.
+  \item Remember that accessors (i.e.~getter methods) should always be
+    \mintinline{cpp}{const}.
+  \item Try to comment with the level of detail you would find helpful (but not
+    irritating) in code of similar complexity written by another student in
+    this class.
+\end{itemize}
+
+Write a \mintinline{cpp}{CountrySong} class with the following
+\mintinline{cpp}{private} members, all of type \mintinline{cpp}{bool}:
+\begin{itemize}
+  \item \mintinline{cpp}{girl}
+  \item \mintinline{cpp}{truck}
+  \item \mintinline{cpp}{dog}
+\end{itemize}
+
+Write getters and setters, with inline implementations, for each of the three
+\mintinline{cpp}{private} data members.  In at least one of the setters, accept
+an argument with the same name as the \mintinline{cpp}{private} data member
+being set, and use the \mintinline{cpp}{this->} syntax to change the value of
+the data member.
+
+Prototype a constructor for the class capable of taking 0, 1, 2, or 3 arguments
+(i.e.~a constructor with three arguments, each of which has a default value).
+Let the default value of each argument be \mintinline{cpp}{true}.
+
+Prototype a method named \mintinline{cpp}{sing} that is
+\mintinline{cpp}{const}, accepts no arguments, and returns
+\mintinline{cpp}{void}.
+
+Outside the class, define the constructor that was prototyped above.  Use the
+initialization list to set the values of all data members.  The body of this
+function should be empty.
+
+Below the definition of the constructor, define the \mintinline{cpp}{sing}
+method to do the following:
+\begin{itemize}
+  \item If \mintinline{cpp}{girl} is \mintinline{cpp}{true} output
+    \mintinline{cpp}{"My girl, she left me\n"}
+  \item If \mintinline{cpp}{truck} is \mintinline{cpp}{true} output
+    \mintinline{cpp}{"My pickup broke down\n"}
+  \item If \mintinline{cpp}{dog} is \mintinline{cpp}{true} output
+    \mintinline{cpp}{"My dog, he died\n"}
+  \item Finally, output \mintinline{cpp}{"In this small small town\n"}
+\end{itemize}
+
+Write a short \mintinline{cpp}{main()} to do the following:
+\begin{itemize}
+  \item Declare and initialize (without using the \mintinline{cpp}{=}
+    operator) a \mintinline{cpp}{CountrySong} named \mintinline{cpp}{a} such
+    that all three private data members are set to \mintinline{cpp}{true}.
+  \item Declare and initialize (using the \mintinline{cpp}{=} operator) a
+    \mintinline{cpp}{CountrySong} named \mintinline{cpp}{b} such that only the
+    \mintinline{cpp}{truck} data member is set to \mintinline{cpp}{true}.
+  \item Declare a \mintinline{cpp}{CountrySong} named \mintinline{cpp}{c} and
+    initialize it by setting it equal to the \mintinline{cpp}{CountrySong}
+    named \mintinline{cpp}{a}.
+  \item Use the setter for the \mintinline{cpp}{truck} data member to set
+    \mintinline{cpp}{truck} to \mintinline{cpp}{false} in the
+    \mintinline{cpp}{CountrySong} named \mintinline{cpp}{c}.
+  \item Call the \mintinline{cpp}{sing} method on \mintinline{cpp}{a},
+    \mintinline{cpp}{b}, and \mintinline{cpp}{c}, in that order (you need not
+    note the output in this case, but you may if you wish).
+\end{itemize}
+
+\newpage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.classes.cpp.gen.section.all}}
+
+\newOddPage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted[label=Output]{text}{\docCodeDir/.classes.gen.output}}
+
+\end{document}
+

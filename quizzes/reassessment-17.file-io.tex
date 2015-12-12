@@ -1,0 +1,46 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\standardsSection{
+  \standard{file I/O}
+}
+
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{file I/O}
+}
+
+% mostly from reassessment-04 -> quiz-10
+
+Given
+
+\inputminted[label={file-io-input.txt}]{text}{\docCodeDir/file-io-input.txt}
+
+write an entire program (including \mintinline{cpp}{#include} directives and
+\mintinline{cpp}{using} statements) to generate
+
+\inputminted[label={file-io-output.gen.txt}]{text}{\docCodeDir/file-io-output.gen.txt}
+
+without hard coding the number of integers to read in.  Be sure to check that
+opening each file succeeded before reading from or writing to it, and
+\mintinline{cpp}{return 1} from \mintinline{cpp}{main()} if it did not.
+
+\newpage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/file-io.cpp}}
+
+\end{document}
+

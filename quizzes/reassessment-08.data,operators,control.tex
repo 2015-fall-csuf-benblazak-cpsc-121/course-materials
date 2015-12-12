@@ -1,0 +1,161 @@
+% vim: foldmethod=marker foldlevel=0
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+% -----------------------------------------------------------------------------
+%   \standard{data types and representation}
+% {{{
+
+\newpage
+
+\section{Question}
+\standards{
+  \standard{data types and representation}
+}
+
+\begin{itemize}
+
+  \item Complete the following table for a typical 64 bit system:
+
+    {
+      \def\arraystretch{2}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Literal}
+        & \textbf{\hbox to 2in{\hfill{}Type\hfill}}
+        & \textbf{Size (in bytes)}
+        \\\hline
+        \mintinline{cpp}{true}
+        & \textAnswer{\mintinline{cpp}{bool}}
+        & \textAnswer{1}
+        \\\hline
+        \mintinline{cpp}{3}
+        & \textAnswer{\mintinline{cpp}{int}}
+        & \textAnswer{4}
+        \\\hline
+        \mintinline{cpp}{'a'}
+        & \textAnswer{\mintinline{cpp}{char}}
+        & \textAnswer{1}
+        \\\hline
+        \mintinline{cpp}{3.14}
+        & \textAnswer{\mintinline{cpp}{double}}
+        & \textAnswer{8}
+        \\\hline
+        \mintinline{cpp}{3.14F}
+        & \textAnswer{\mintinline{cpp}{float}}
+        & \textAnswer{4}
+        \\\hline
+        \mintinline{cpp}{"hello world"}
+        & \textAnswer{\mintinline{cpp}{const char[12]}}
+        & \textAnswer{12}
+        \\\hline
+      \end{tabular}
+    }
+    \vspace{3ex}
+
+  \item Complete the following table:
+
+    {
+      \def\arraystretch{2}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{binary}
+        & \textbf{decimal}
+        & \textbf{hexadecimal}
+        \\\hline
+        \mintinline{cpp}{0b0111}
+        & \textAnswer{\mintinline{cpp}{7}}
+        & \textAnswer{\mintinline{cpp}{0x7}}
+        \\\hline
+        \textAnswer{\mintinline{cpp}{0b1011}}
+        & \mintinline{cpp}{11}
+        & \textAnswer{\mintinline{cpp}{0xB}}
+        \\\hline
+        \textAnswer{\mintinline{cpp}{0b1101}}
+        & \textAnswer{\mintinline{cpp}{13}}
+        & \mintinline{cpp}{0xD}
+        \\\hline
+      \end{tabular}
+    }
+    \vspace{3ex}
+
+  \item What are the minimum and maximum values of a signed 4-bit integer?
+    \textAnswer{\par
+      $-2^{4-1} = -8$ and $2^{4-1}-1 = 7$
+    }
+    \vfill
+
+  \item What are the minimum and maximum values of a unsigned 4-bit integer?
+    \textAnswer{\par
+      $0$ and $2^4-1 = 15$
+    }
+    \vfill
+
+\end{itemize}
+
+% }}}
+% -----------------------------------------------------------------------------
+%   \standard{operators}
+% {{{
+
+\newpage
+
+\section{Question}
+\standards{
+  \standard{operators}
+}
+
+\begin{itemize}
+
+  \item Show the output of the following program:
+    \evaluateCodeLeft{operators}{all}
+    \vspace{3ex}
+
+  \item Evaluate the following statement piece by piece, using the method shown
+    in class (if you are unsure of how this should look, please ask).  If any
+    portion of this statement would produce a runtime error (e.g.~by dividing
+    by \mintinline{cpp}{0}) stop evaluating at that point, and explain.
+
+    \vspace{2ex}
+    \mintinline[fontsize=\Large]{cpp}{1 + 1 - 1 / 1 * + 1 - - - 1 && 1 == ! 1 || 1 + 1 >= 1 / 1 % 1}
+    \textAnswer{\par
+      \vspace{-1.9em}
+      \hspace{-1.2ex}
+      \includegraphics[width=6.37in]{\docImageDir/operators}
+    }
+    \vfill
+
+\end{itemize}
+
+% }}}
+% -----------------------------------------------------------------------------
+%   \standard{control flow}
+% {{{
+
+\newpage
+
+\section{Question}
+\standards{
+  \standard{control flow}
+}
+
+Use two \mintinline{cpp}{for} loops (one inside the other, and without any
+conditionals) to obtain the following output:
+
+\inputminted[label=Output]{cpp}{\docCodeDir/.control.gen.output}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.control.cpp.gen.section.all}}
+
+% }}}
+
+\end{document}
+

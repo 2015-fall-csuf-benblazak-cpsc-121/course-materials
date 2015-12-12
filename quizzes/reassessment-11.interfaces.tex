@@ -1,0 +1,74 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\standardsSection{
+  \standard{interfaces}
+}
+
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{interfaces}
+}
+
+Recall that an interface is an abstract class, and an abstract class is a class
+with at least one pure \mintinline{cpp}{virtual} method.
+
+Before you begin, please
+\begin{itemize}
+  \item Be sure to place at the top of your answer any necessary
+    \mintinline{cpp}{#include} directives or \mintinline{cpp}{using}
+    statements.
+  \item Remember to preface your interface with a block comment containing a
+    short description of what it is intended to represent or be used for, etc.
+  \item Remember to include a \mintinline{cpp}{virtual} destructor with a
+    default inline implementation.  \textbf{All interfaces classes should have
+    a \mintinline{cpp}{virtual} destructor.}
+  \item Be sure to write your answers neatly and in a good and consistent
+    style.  This will be graded.  I recommend writing out your solution on
+    scratch paper, and then copying it to the following page.  You might also
+    consider using pencil, if pen is your usual choice.
+  \item Try to comment with the level of detail you would find helpful (but not
+    irritating) in code of similar complexity written by another student in
+    this class.
+\end{itemize}
+
+Write an interface for an \mintinline{cpp}{Automobile} having the following
+\mintinline{cpp}{private} data members (all of type \mintinline{cpp}{float}):
+
+\begin{itemize}
+  \item \mintinline{cpp}{fuel}
+  \item \mintinline{cpp}{speed}
+\end{itemize}
+
+Write \mintinline{cpp}{virtual} getters and setters, with inline
+implementations, for each private data member.
+
+Write declarations for at least two of the following pure
+\mintinline{cpp}{virtual} methods (all of which take no arguments and return
+\mintinline{cpp}{void}):
+\begin{itemize}
+  \item \mintinline{cpp}{turnLeft}
+  \item \mintinline{cpp}{turnRight}
+  \item \mintinline{cpp}{raiseHydraulics}
+  \item \mintinline{cpp}{spinRims}
+\end{itemize}
+
+\newpage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.interfaces.cpp.gen.section.all}}
+
+\end{document}
+

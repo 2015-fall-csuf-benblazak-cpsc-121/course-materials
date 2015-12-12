@@ -1,0 +1,82 @@
+% -----------------------------------------------------------------------------
+% Copyright &copy; 2015 Ben Blazak <bblazak@fullerton.edu>  
+% This work is licensed under a [Creative Commons Attribution 4.0 International
+% License] (http://creativecommons.org/licenses/by/4.0/)  
+% -----------------------------------------------------------------------------
+
+\input{document-setup.part.tex}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\docCopyright
+
+\standardsSection{
+  \standard{inheritance}
+}
+
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{inheritance}
+}
+
+Before you begin, please
+\begin{itemize}
+  \item Be sure to place at the top of your answer any necessary
+    \mintinline{cpp}{#include} directives or \mintinline{cpp}{using}
+    statements.
+  \item Remember to preface your program with a block comment containing a
+    short description of what it is intended to do.
+  \item Be sure to write your answers neatly and in a good and consistent
+    style.  This will be graded.  I recommend writing out your solution on
+    scratch paper, and then copying it to the following page.  You might also
+    consider using pencil, if pen is your usual choice.
+  \item Try to comment with the level of detail you would find helpful (but not
+    irritating) in code of similar complexity written by another student in
+    this class.
+\end{itemize}
+
+Write a \mintinline{cpp}{Rectangle} class with the following
+\mintinline{cpp}{private} data members (as \mintinline{cpp}{float}s):
+\begin{itemize}
+  \item \mintinline{cpp}{length}
+  \item \mintinline{cpp}{width}
+\end{itemize}
+and the following \mintinline{cpp}{public} members (defined inside the class):
+\begin{itemize}
+  \item A constructor that takes two \mintinline{cpp}{float}s as arguments, and
+    uses them to initialize the class's \mintinline{cpp}{private} data members
+    (using the initialization list).
+  \item A \mintinline{cpp}{const} method named \mintinline{cpp}{area} that
+    takes no arguments, and returns the area of the rectangle as a
+    \mintinline{cpp}{float}.
+\end{itemize}
+
+Next, write a \mintinline{cpp}{Square} class that inherits from
+\mintinline{cpp}{Rectangle} and has the following \mintinline{cpp}{public}
+members (defined inside the class):
+\begin{itemize}
+  \item A constructor that takes one \mintinline{cpp}{float} as an argument,
+    and passes it to the parent constructor such that the inherited private
+    data members are properly initialized.
+\end{itemize}
+
+Finally, write a \mintinline{cpp}{main} function that creates a
+\mintinline{cpp}{Rectangle} and a \mintinline{cpp}{Square}, and uses them to
+generate the following output:
+\inputminted[label=Output]{text}{\docCodeDir/.inheritance.gen.output.gen.section.all}
+
+\newpage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.inheritance.cpp.gen.section.all}}
+
+\newOddPage
+
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{~}
+
+\end{document}
+
