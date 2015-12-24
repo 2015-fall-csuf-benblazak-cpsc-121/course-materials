@@ -1,0 +1,30 @@
+\newEvenPage
+
+% code from reassessment-11
+
+\section{Question}
+\standards{
+  \standard{interfaces}
+}
+
+Recall that an interface is an abstract class, and an abstract class is a class
+with at least one pure virtual method.
+
+Leave a bit of room at the top of the page for comments,
+\mintinline{cpp}{#include} directives, and \mintinline{cpp}{using} statements.
+
+Write an interface named \mintinline{cpp}{Automobile} that has two private data
+members of type \mintinline{cpp}{double}: \mintinline{cpp}{fuel}, and
+\mintinline{cpp}{speed}.  Remember to declare and define a virtual destructor
+(all interface classes should have a virtual destructor).  Declare and define
+(inline) virtual getters and setters for both private data members.  Declare
+the following pure virtual methods, all of which take no arguments and return
+void: \mintinline{cpp}{turnLeft}, \mintinline{cpp}{turnRight},
+\mintinline{cpp}{raiseHydraulics}, \mintinline{cpp}{spinRims}.
+
+\newOddPage
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.interfaces-1.cpp.gen.section.all}}
+
+\newpage
+

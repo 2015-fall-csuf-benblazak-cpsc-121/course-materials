@@ -1,0 +1,37 @@
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{standard library}
+}
+
+Leave a bit of room at the top of the page for comments,
+\mintinline{cpp}{#include} directives, and \mintinline{cpp}{using} statements.
+
+Overload the stream insertion operator for objects of type
+\mintinline{cpp}{vector<int>} (or optionally, use templates to overload it for
+\mintinline{cpp}{vector}s of any type).  The output for a vector containing the
+integers \mintinline{cpp}{1}, \mintinline{cpp}{2}, and \mintinline{cpp}{3} (for
+example) should be \mintinline{text}{( 1 2 3 )}.
+
+Write a \mintinline{cpp}{main()} to do the following:
+\begin{itemize}
+  \item Create and initialize (in the same statement) an object named
+    \mintinline{cpp}{v} of type \mintinline{cpp}{vector<int>} holding the
+    values \mintinline{cpp}{1}, \mintinline{cpp}{2}, and \mintinline{cpp}{3}
+    (in that order).
+  \item Use the method on \mintinline{cpp}{vector<int>} that adds an element to
+    the end of the vector (or pushes an element onto the back of the vector) to
+    add \mintinline{cpp}{4} to the end of \mintinline{cpp}{v}.
+  \item Use the \mintinline{cpp}{[]} operator to change the element at index
+    \mintinline{cpp}{1} to \mintinline{cpp}{5}.
+  \item Use the overloaded stream insertion operator to print
+    \mintinline{cpp}{v} to standard output, \textbf{and indicate the output}.
+\end{itemize}
+
+\newOddPage
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\showCodeTop{standard-2}{all}}
+
+\newpage
+

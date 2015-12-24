@@ -1,0 +1,26 @@
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{polymorphism}
+}
+
+Show the output of the following program:
+\evaluateCodeTop{polymorphism-1}{all}
+\vspace{3ex}
+
+What (if anything) is wrong with the code that is commented out above?
+\textAnswer{\par
+  It is possible to have a pointer of type superclass pointing to an object of
+  type subclass, but not the other way around.  This makes sense because a
+  child class will always have the same members as its parent (though, not
+  always with the same access specifiers), but the reverse is rarely true.
+  Also, conceptually, a \mintinline{cpp}{SmallDog} is always a
+  \mintinline{cpp}{Dog}, so we may treat it as one; but a \mintinline{cpp}{Dog}
+  will not always be a \mintinline{cpp}{SmallDog}, and it would be a mistake to
+  assume we could treat all \mintinline{cpp}{Dog}s as
+  \mintinline{cpp}{SmallDog}s.
+}
+
+\newpage
+

@@ -1,0 +1,56 @@
+\newEvenPage
+
+\section{Question}
+\standards{
+  \standard{templates}
+}
+
+Leave a bit of room at the top of the page for comments,
+\mintinline{cpp}{#include} directives, and \mintinline{cpp}{using} statements.
+
+Write a function template named \mintinline{cpp}{multiply} capable of taking
+two arguments of any type (so long as they are both of the same type) and
+returning their product (using the \mintinline{cpp}{*} operator).
+
+Write a class template named \mintinline{cpp}{Complex} that accepts one
+template argument, \mintinline{cpp}{T}, and has two public data members of type
+\mintinline{cpp}{T}: \mintinline{cpp}{r} to store the real part, and
+\mintinline{cpp}{i} to store the imaginary part.  Overload the
+\mintinline{cpp}{*} operator so that two \mintinline{cpp}{Complex<T>} objects
+may be multiplied (prototype this method in the class definition, and define it
+directly below).  Recall that the formula for multiplying two complex numbers
+$(a+bi)$ and $(c+di)$ is
+\begin{align*}
+  (a+bi)(c+di) &= ac + a(di) + (bi)c + (bi)(di) & \text{FOIL} \\
+               &= (ac + (bi)(di)) + (a(di) + (bi)c) & \text{rearrange}\\
+               &= (ac + bdi^2) + (a(di) + (bi)c) & \text{simplify} \\
+               &= (ac - bd) + (ad + bc)i & \text{simplify}
+\end{align*}
+
+Write a \mintinline{cpp}{main()} to do the following:
+\begin{itemize}
+  \item Create two objects, \mintinline{cpp}{a} and \mintinline{cpp}{b}, using
+    the class template \mintinline{cpp}{Complex} with the template argument
+    \mintinline{cpp}{int}.
+  \item For \mintinline{cpp}{a}, set the real part to \mintinline{cpp}{1} and
+    the imaginary part to \mintinline{cpp}{2}.
+  \item For \mintinline{cpp}{b}, set the real part to \mintinline{cpp}{3} and
+    the imaginary part to \mintinline{cpp}{4}.
+  \item Create an object named \mintinline{cpp}{c} of the same type as
+    \mintinline{cpp}{a} and \mintinline{cpp}{b}, and use the
+    \mintinline{cpp}{multiply} function template to set it equal to the product
+    of \mintinline{cpp}{a} and \mintinline{cpp}{b}.
+  \item Output the value of \mintinline{cpp}{c} using the following statement:
+    \mintinline{cpp}{cout << c.r << " + " << c.i << "i\n";}.
+\end{itemize}
+
+\newOddPage
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{\inputminted{cpp}{\docCodeDir/.templates-1.cpp.gen.section.all}}
+
+\newOddPage
+\textQuestion{\makePageQuadrilleRuled}
+\textAnswer{~}
+
+\newpage
+
